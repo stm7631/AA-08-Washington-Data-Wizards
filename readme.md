@@ -12,9 +12,9 @@ Currently, decisions on where to start, stop, and restart (if necessary) mass dr
 This repository currently contains the ESPEN data that we will be using to create the vizualizations. We are in the process of validating this data for use on the dashboard.
 
 ## Contact
-Daniel Lee: donloby@uw.edu
-Bradley Balansay: alansay@uw.edu
-Shane Martin: stm7631@uw.edu
-Aditya Ramani: adir84@uw.edu
+Daniel Lee: donloby@uw.edu  
+Bradley Balansay: alansay@uw.edu  
+Shane Martin: stm7631@uw.edu  
+Aditya Ramani: adir84@uw.edu  
 
 
