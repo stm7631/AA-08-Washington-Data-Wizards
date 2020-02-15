@@ -13,7 +13,7 @@ This repository currently contains the ESPEN data that we will be using to creat
 
 ## Contact
 Daniel Lee: donloby@uw.edu  
-Bradley Balansay: alansay@uw.edu  
+Bradley Balansay: balansay@uw.edu  
 Shane Martin: stm7631@uw.edu  
 Aditya Ramani: adir84@uw.edu  
 
