@@ -1,0 +1,97 @@
+
+//global
+body {
+    font-family: "Lato", sans-serif !important;
+    font-size: 1.1rem;
+}
+
+.jumbotron {
+    text-align: center;
+    padding: 1rem 0rem 1rem 0rem;
+    background-color: transparent;
+}
+
+.card {
+    border: none;
+    background-color: transparent;
+}
+
+a {
+    color: #A7EAFF;
+    text-decoration: none;
+
+    &:hover {
+        color: #02C2FF;
+        text-decoration: none;
+    }
+}
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 600px,
+  md: 800px,
+  lg: 1000px,
+  xl: 1280px
+);
+
+//top section
+.hero {
+    display: flex;
+    align-items: flex-end;
+    background-image: url("images/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+
+    #hero-text {
+        color: white;
+        text-align: center;
+        font-size: 3rem;
+    }
+}
+
+
+
+//middle section
+#solution {
+    background-color: #F5F5F5;
+    margin-top: 5rem;
+    padding-top: 2rem;
+    padding-bottom:5rem;
+}
+
+//bottom section
+#contact {
+    color: white;
+    background-color: #575757;
+    padding: 2rem 0rem 0rem 0rem;
+    
+    .jumbotron {
+        margin: 0rem;
+    }
+
+    .rounded {
+        border-radius: 100% !important;
+    }
+
+    #contact-info {
+        .card {
+            padding: 2rem;
+
+            .contact-details {
+                margin: 0rem;
+                text-align: center;
+                
+                line-height: 0rem;
+            
+                h2 {
+                    margin: 0rem;
+                }
+                .email {
+                    color: #C7C7C7;
+                }
+            }
+        }
+    }
+}
+
