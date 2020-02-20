@@ -66,6 +66,7 @@ a:hover {
 
 #contact .rounded {
   border-radius: 100% !important;
+  margin-bottom: 1rem;
 }
 
 #contact #contact-info .card {
