@@ -1,0 +1,89 @@
+body {
+  font-family: "Lato", sans-serif !important;
+  font-size: 1.3rem;
+}
+
+.jumbotron {
+  text-align: center;
+  padding: 1rem 0rem 1rem 0rem;
+  background-color: transparent;
+}
+
+.card {
+  border: none;
+  background-color: transparent;
+}
+
+.card-body {
+  padding: 0rem 2rem 0rem 2rem;
+}
+
+a {
+  color: #A7EAFF;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #02C2FF;
+  text-decoration: none;
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  background-image: url("images/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+}
+
+.hero #hero-text {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+}
+
+#solution {
+  background-color: #F5F5F5;
+  margin-top: 5rem;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+
+#contact {
+  color: white;
+  background-color: #575757;
+  padding: 2rem 0rem 0rem 0rem;
+}
+
+#contact .jumbotron {
+  margin: 0rem;
+}
+
+#contact .rounded {
+  border-radius: 100% !important;
+  margin-bottom: 1rem;
+}
+
+#contact #contact-info .card {
+  padding: 2rem;
+}
+
+#contact #contact-info .card .contact-details {
+  margin: 0rem;
+  text-align: center;
+  line-height: 0rem;
+}
+
+#contact #contact-info .card .contact-details h2 {
+  margin: 0rem;
+}
+
+#contact #contact-info .card .contact-details .email {
+  color: #C7C7C7;
+}
+/*# sourceMappingURL=index.css.map */
