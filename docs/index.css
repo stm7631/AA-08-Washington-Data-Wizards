@@ -1,12 +1,14 @@
 body {
-  font-family: "Lato", sans-serif !important;
-  font-size: 1.3rem;
+  font-family: "Noto Sans", sans-serif !important;
+  font-size: 1rem;
+  color: #4E4E4E;
 }
 
 .jumbotron {
   text-align: center;
   padding: 1rem 0rem 1rem 0rem;
   background-color: transparent;
+  margin: 0rem;
 }
 
 .card {
@@ -15,7 +17,18 @@ body {
 }
 
 .card-body {
-  padding: 0rem 2rem 0rem 2rem;
+  padding: 0rem;
+}
+
+.card-body .card-title {
+  color: #2C3F4D;
+  font-size: 1.4rem;
+  margin: 0rem;
+  padding: 0.7rem 0rem 0.3rem 0rem;
+}
+
+.card-img-top {
+  border-radius: 1rem;
 }
 
 a {
@@ -28,23 +41,42 @@ a:hover {
   text-decoration: none;
 }
 
+.serif {
+  font-family: "Merriweather";
+  font-weight: bold;
+}
+
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  background-image: url("images/hero.jpg");
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("images/hero3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 50vh;
+  height: 60vh;
+}
+
+.hero #hero-name {
+  color: #B32A33;
 }
 
 .hero #hero-text {
-  color: white;
+  color: black;
   text-align: center;
   font-size: 3rem;
+}
+
+#intro .row {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.detail-card {
+  margin-top: 5rem;
 }
 
 #solution {
