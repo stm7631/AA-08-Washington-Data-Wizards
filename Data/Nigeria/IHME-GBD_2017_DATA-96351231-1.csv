@@ -1,0 +1,31 @@
+measure,location,sex,age,cause,metric,year,val,upper,lower
+Prevalence,Nigeria,Both,All Ages,Schistosomiasis,Number,2017,26589908.0912,29412114.11,24004857.1115
+Prevalence,Nigeria,Both,All Ages,Schistosomiasis,Percent,2017,0.132141448538,0.146228001612,0.119267721562
+Prevalence,Nigeria,Both,All Ages,Schistosomiasis,Rate,2017,12902.2140823,14271.632363600002,11647.8704779
+Prevalence,Nigeria,Both,All Ages,Lymphatic filariasis,Number,2017,17417884.2565,19841566.3709,15607886.3774
+Prevalence,Nigeria,Both,All Ages,Lymphatic filariasis,Percent,2017,0.0865598037677,0.0987991758323,0.0776307598871
+Prevalence,Nigeria,Both,All Ages,Lymphatic filariasis,Rate,2017,8451.67537873,9627.71801115,7573.41058575
+Prevalence,Nigeria,Both,All Ages,Onchocerciasis,Number,2017,3151078.97874,5377970.64837,1791784.29341
+Prevalence,Nigeria,Both,All Ages,Onchocerciasis,Percent,2017,0.0156594490624,0.026715289848,0.00889112944629
+Prevalence,Nigeria,Both,All Ages,Onchocerciasis,Rate,2017,1528.9972208299998,2609.55127769,869.4270195839999
+DALYs (Disability-Adjusted Life Years),Nigeria,Both,All Ages,Schistosomiasis,Number,2017,238697.8646604658,418988.08723079675,133917.10169860738
+DALYs (Disability-Adjusted Life Years),Nigeria,Both,All Ages,Schistosomiasis,Percent,2017,0.002030354186001203,0.0034786314714289274,0.0011624351286275017
+DALYs (Disability-Adjusted Life Years),Nigeria,Both,All Ages,Schistosomiasis,Rate,2017,115.82330184284613,203.30547893638874,64.98055989742532
+DALYs (Disability-Adjusted Life Years),Nigeria,Both,All Ages,Lymphatic filariasis,Number,2017,520929.4317858794,841100.3322740211,282632.3682178878
+DALYs (Disability-Adjusted Life Years),Nigeria,Both,All Ages,Lymphatic filariasis,Percent,2017,0.004436276147108822,0.007137732866940177,0.0024010766226902334
+DALYs (Disability-Adjusted Life Years),Nigeria,Both,All Ages,Lymphatic filariasis,Rate,2017,252.7704506380166,408.12689214319187,137.14162940344323
+DALYs (Disability-Adjusted Life Years),Nigeria,Both,All Ages,Onchocerciasis,Number,2017,222960.98882555243,424740.17833768355,93658.16735826133
+DALYs (Disability-Adjusted Life Years),Nigeria,Both,All Ages,Onchocerciasis,Percent,2017,0.001899584391811278,0.003550033957082415,0.0008045427036213969
+DALYs (Disability-Adjusted Life Years),Nigeria,Both,All Ages,Onchocerciasis,Rate,2017,108.1873017366732,206.09656458538763,45.44572781752396
+YLDs (Years Lived with Disability),Nigeria,Both,All Ages,Lymphatic filariasis,Number,2017,520929.431786,841100.332274,282632.368218
+YLDs (Years Lived with Disability),Nigeria,Both,All Ages,Lymphatic filariasis,Percent,2017,0.0251861319807,0.0373891088115,0.015974650951
+YLDs (Years Lived with Disability),Nigeria,Both,All Ages,Lymphatic filariasis,Rate,2017,252.770450638,408.12689214299996,137.141629403
+YLDs (Years Lived with Disability),Nigeria,Both,All Ages,Onchocerciasis,Number,2017,222960.988826,424740.178338,93658.1673583
+YLDs (Years Lived with Disability),Nigeria,Both,All Ages,Onchocerciasis,Percent,2017,0.0108091056364,0.0190816966643,0.00481333830057
+YLDs (Years Lived with Disability),Nigeria,Both,All Ages,Onchocerciasis,Rate,2017,108.18730173700001,206.09656458499998,45.4457278175
+YLDs (Years Lived with Disability),Nigeria,Both,All Ages,Schistosomiasis,Number,2017,198940.568259,384511.999471,95032.8493437
+YLDs (Years Lived with Disability),Nigeria,Both,All Ages,Schistosomiasis,Percent,2017,0.00961001271629,0.016955869425,0.00521561639116
+YLDs (Years Lived with Disability),Nigeria,Both,All Ages,Schistosomiasis,Rate,2017,96.5318794078,186.57665597599998,46.1127643943
+YLLs (Years of Life Lost),Nigeria,Both,All Ages,Schistosomiasis,Number,2017,39757.296401048654,58691.28165038622,26595.65389824107
+YLLs (Years of Life Lost),Nigeria,Both,All Ages,Schistosomiasis,Percent,2017,0.0004096742053922573,0.0005817043452898725,0.00028120714038275214
+YLLs (Years of Life Lost),Nigeria,Both,All Ages,Schistosomiasis,Rate,2017,19.29142243506975,28.47875509823136,12.905002118663832
