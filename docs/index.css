@@ -1,6 +1,6 @@
 body {
   font-family: "Noto Sans", sans-serif !important;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #4E4E4E;
 }
 
@@ -9,6 +9,16 @@ body {
   padding: 1rem 0rem 1rem 0rem;
   background-color: transparent;
   margin: 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .card {
@@ -22,13 +32,24 @@ body {
 
 .card-body .card-title {
   color: #2C3F4D;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin: 0rem;
-  padding: 0.7rem 0rem 0.3rem 0rem;
+  padding: 1rem 0rem 0.5rem 0rem;
 }
 
-.card-img-top {
-  border-radius: 1rem;
+img {
+  border-radius: 1rem !important;
+  -webkit-transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+  transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+img:hover {
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05) !important;
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05) !important;
+  -webkit-transform: translate(0px, -3px);
+          transform: translate(0px, -3px);
+  -webkit-transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+  transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
 }
 
 a {
@@ -41,9 +62,14 @@ a:hover {
   text-decoration: none;
 }
 
-.serif {
+.serif, .serif-sub {
+  font-size: 3rem;
   font-family: "Merriweather";
   font-weight: bold;
+}
+
+.serif-sub {
+  font-size: 2rem;
 }
 
 .hero {
@@ -53,7 +79,7 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url("images/hero3.jpg");
+  background-image: url("images/hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 60vh;
@@ -79,16 +105,86 @@ a:hover {
   margin-top: 5rem;
 }
 
+.nav-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 27%;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: black !important;
+  -webkit-transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+  transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  -webkit-transform: translate(0px, -2px);
+          transform: translate(0px, -2px);
+  -webkit-transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+  transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+  color: #B32A33 !important;
+}
+
+.navbar-brand {
+  color: #B32A33 !important;
+}
+
+.navbar {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 #solution {
-  background-color: #F5F5F5;
-  margin-top: 5rem;
-  padding-top: 2rem;
+  color: #FFFFFF;
+  background-color: #2C3F4D;
+  margin-top: 4rem;
+  padding-top: 1rem;
   padding-bottom: 5rem;
 }
 
+#solution-img {
+  border-radius: 1rem;
+}
+
+#solution-header {
+  padding: 2rem 0rem 2rem 0rem;
+}
+
+.btn {
+  background-color: #FFFFFF;
+  color: #2C3F4D;
+  font-weight: bold;
+  border-radius: 1rem;
+  border: none;
+}
+
+.btn:hover {
+  color: #2C3F4D;
+  background-color: #C7DBEB;
+}
+
+.btn:active {
+  color: #2C3F4D !important;
+  background-color: #8DA2B1 !important;
+  border: none !important;
+}
+
 #contact {
-  color: white;
-  background-color: #575757;
+  background-color: #FFFFFF;
   padding: 2rem 0rem 0rem 0rem;
 }
 
@@ -116,6 +212,14 @@ a:hover {
 }
 
 #contact #contact-info .card .contact-details .email {
-  color: #C7C7C7;
+  color: #2C3F4D;
+}
+
+#contact #link {
+  color: #032E4E;
+}
+
+#contact #link:hover {
+  color: #236596;
 }
 /*# sourceMappingURL=index.css.map */
