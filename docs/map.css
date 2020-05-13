@@ -10,7 +10,7 @@
     stroke: #ffffff !important;
     stroke-width:2px;
     stroke-linejoin: round;
-    fill: #2C3F4D !important;
+    fill: #236596 !important;
     cursor: pointer;
   }
   #info-box {
@@ -24,4 +24,9 @@
     padding: 5px;
     font-family: arial;
   }
-  
+
+ path {
+   fill: #2C3F4D;
+   stroke: #ffffff !important;
+   stroke-width: 0.5px;
+ }

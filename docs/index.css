@@ -72,6 +72,11 @@ a:hover {
   font-size: 2rem;
 }
 
+#country-select {
+  text-align: center;
+  color: black !important;
+}
+
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -83,6 +88,11 @@ a:hover {
   background-repeat: no-repeat;
   background-size: cover;
   height: 60vh;
+}
+
+#map-header {
+  background-image: none;
+  height: auto;
 }
 
 .hero #hero-name {
