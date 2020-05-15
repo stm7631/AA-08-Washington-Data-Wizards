@@ -38,15 +38,15 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="../index.html">
-                            <h5><b>Home</b></h5><span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../map.html">
-                            <h5>Solution</h5>
-                        </a>
-                    </li>
+						<a class="nav-link" href="index.html">
+							<h5>Home</h5>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="map.html">
+							<h5><b>Solution</b></h5><span class="sr-only">(current)</span>
+						</a>
+					</li>
                 </ul>
             </div>
         </nav>
@@ -57,7 +57,7 @@
     <div class="cover"></div>
     <div class="loader"></div>
     <div id="vizArea" class="d-inline-flex flex-row">
-        <div id="sidebar" class="d-flex align-items-center flex-column">
+        <div id="sidebar" class="d-flex flex-column">
             <div id="dropdown">
                 <label for="diseases">Disease to visualize:</label>
                 <select id="diseases">
@@ -67,8 +67,68 @@
                 </select>
             </div>
             <div>
-                <h4>Executive Summary</h4>
-                <p>Write stuff here I guess.</p>
+                <h4 class="mt-3"><b>Executive Summary</b></h4>
+                <p>
+                    <b>Taraba</b> - Low drug procurement rate and low coverage. They need to procure more drugs.<br><br>
+                    <b>Federal Capital Territory</b> - Procuring many drugs but maintaining a low coverage rate. They need to improve distribution. <br><br>
+                    <b>Osun</b> - They are procuring more drugs than average compared to the people treated in MDA, but they have low MDA coverage. They need to improve distribution.
+        <!-- this is for schisto, has to change on dropdown -->
+                </p>
+                <h4 class="mt-3"><b>Definitions</b></h4>
+                <div id="accordion" class="flex-fill">
+                    <div class="card">
+                      <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Disease Vocabulary
+                          </button>
+                        </h5>
+                      </div>
+                  
+                      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div id="vocab" class="card-body">
+                            <p>
+                                <b>Albendazole</b> (ALB) <br>
+                                <b>Ivermectin</b> (IVM) <br>
+                                <b>Praziquantel</b> (PZQ)
+                            </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Drug Vocabulary
+                          </button>
+                        </h5>
+                      </div>
+                      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div id="vocab" class="card-body">
+                            <p>
+                                <b>Lymphatic Filariasis</b> (LF) <br>
+                                <b>Onchocerciasis</b> (Oncho) <br>
+                                <b>Schistosomiasis</b>  (Schisto)
+                            </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Data Information
+                          </button>
+                        </h5>
+                      </div>
+                      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div id="vocab" class="card-body">
+                            <b>No MDA Data For:</b> Abia, Adamawa, Bauchi, Borno, Gombe, Imo, Lagos, Oyo, Rivers, Yobe, Zamfara 
+                            <!-- this needs to vary based on dropdown -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
             </div>
         </div>
         <section id="solution" class="flex-fill">

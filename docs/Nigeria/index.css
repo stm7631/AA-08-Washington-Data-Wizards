@@ -165,8 +165,7 @@ a:hover {
 }
 
 #solution {
-  color: #FFFFFF;
-  background-color: #2C3F4D;
+  background-color: #FFFFFF;
   padding-top: 1rem;
   padding-bottom: 5rem;
 }
@@ -236,8 +235,23 @@ a:hover {
 }
 
 #vizzes {
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  margin: 0;
 }
+
+#sidebar {
+  margin: 2rem;
+  width: 20vw;
+  display: flex;
+  align-self: flex-start;
+  text-decoration: none;
+}
+
+#vocab {
+  line-height: 2;
+  padding: 0.3rem;
+}
+
 
 .cover {
   position: fixed;
