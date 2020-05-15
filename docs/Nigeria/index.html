@@ -68,12 +68,22 @@
             </div>
             <div>
                 <h4 class="mt-3"><b>Executive Summary</b></h4>
-                <p>
+                <!-- ONCHO -->
+                <p id="onchoSummary">
+                    <b>Ogun</b> - A lot of drugs per person treated, but a low MDA coverage percentage. Need to distribute drugs better.
+                </p>
+                
+                <!-- SCHISTO -->
+                <p id="schistoSummary" class="hidden">
                     <b>Taraba</b> - Low drug procurement rate and low coverage. They need to procure more drugs.<br><br>
                     <b>Federal Capital Territory</b> - Procuring many drugs but maintaining a low coverage rate. They need to improve distribution. <br><br>
                     <b>Osun</b> - They are procuring more drugs than average compared to the people treated in MDA, but they have low MDA coverage. They need to improve distribution.
-        <!-- this is for schisto, has to change on dropdown -->
                 </p>
+
+                <!-- LF -->
+                <p id="lfSummary" class="hidden">
+                    <b>Ogun</b> - A lot of drugs per person treated, but a low MDA coverage percentage. Need to distribute drugs better.<br><br>
+                    <b>Oyo</b> - A lot of drugs per person treated, but a low MDA coverage percentage. Need to distribute drugs better.
                 <h4 class="mt-3"><b>Definitions</b></h4>
                 <div id="accordion" class="flex-fill">
                     <div class="card">
@@ -88,9 +98,9 @@
                       <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                         <div id="vocab" class="card-body">
                             <p>
-                                <b>Albendazole</b> (ALB) <br>
-                                <b>Ivermectin</b> (IVM) <br>
-                                <b>Praziquantel</b> (PZQ)
+                                <b>Onchocerciasis</b> (Oncho) <br>
+                                <b>Schistosomiasis</b>  (Schisto) <br>
+                                <b>Lymphatic Filariasis</b> (LF)
                             </p>
                         </div>
                       </div>
@@ -106,9 +116,9 @@
                       <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                         <div id="vocab" class="card-body">
                             <p>
-                                <b>Lymphatic Filariasis</b> (LF) <br>
-                                <b>Onchocerciasis</b> (Oncho) <br>
-                                <b>Schistosomiasis</b>  (Schisto)
+                                <b>Albendazole</b> (ALB) <br>
+                                <b>Ivermectin</b> (IVM) <br>
+                                <b>Praziquantel</b> (PZQ)
                             </p>
                         </div>
                       </div>
@@ -116,15 +126,31 @@
                     <div class="card">
                       <div class="card-header" id="headingThree">
                         <h5 class="mb-0">
-                          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Data Information
+                          <button id="dataInfo" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Data Information (Oncho)
                           </button>
                         </h5>
                       </div>
                       <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                         <div id="vocab" class="card-body">
-                            <b>No MDA Data For:</b> Abia, Adamawa, Bauchi, Borno, Gombe, Imo, Lagos, Oyo, Rivers, Yobe, Zamfara 
-                            <!-- this needs to vary based on dropdown -->
+                            <!-- ONCHO -->
+                            <span id="onchoData">
+                                <b>No MDA Data For:</b><br>
+                                Lagos, Nasarawa, Plateau, Rivers</span>
+                            
+                            <!-- SCHISTO -->
+                            <span id="schistoData" class="hidden">
+                                <b>No MDA Data For:</b><br>
+                                Abia, Adamawa, Bauchi, Borno, Gombe, Imo, Lagos, Oyo, Rivers, Yobe, Zamfara
+                            </span>
+
+                            <!-- LF -->
+                            <span id="lfData" class="hidden">
+                                <b>No MDA Data For:</b><br>
+                                Borno, Lagos, Nasarawa, Plateau, Rivers<br><br>
+                                For LF, the drug procurement data we have is from two drugs, ALB and IVM. While IVM shows up twice, the data in the JRSM is split to show how much IVM is procured for Oncho, and how much is for LF.<br><br>
+                                Notice there is no <b>Procurement / Population Requiring Treatment</b> map. The ALB procured for LF has missing data in the required treatment field.
+                            </span>
                         </div>
                       </div>
                     </div>

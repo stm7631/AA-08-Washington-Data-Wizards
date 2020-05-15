@@ -6,14 +6,17 @@ setTimeout(() => {
 
     $('#diseases').on('change', function () {
         if (this.value == "oncho") {
-            $('#onchoViz').removeClass("hidden")
-            $('#schistoViz, #lfViz').addClass("hidden")
+            $('#dataInfo').text("Data Information (Oncho)")
+            $('#onchoSummary, #onchoData, #onchoViz').removeClass("hidden")
+            $('#schistoSummary, #schistoData, #schistoViz, #lfSummary, #lfData, #lfViz').addClass("hidden")
         } else if (this.value == "schisto") {
-            $('#schistoViz').removeClass("hidden")
-            $('#onchoViz, #lfViz').addClass("hidden")
+            $('#dataInfo').text("Data Information (Schisto)")
+            $('#schistoSummary, #schistoData, #schistoViz').removeClass("hidden")
+            $('#onchoSummary, #onchoData, #onchoViz, #lfSummary, #lfData, #lfViz').addClass("hidden")
         } else {
-            $('#lfViz').removeClass("hidden")
-            $('#onchoViz, #schistoViz').addClass("hidden")
+            $('#dataInfo').text("Data Information (LF)")
+            $('#lfSummary, #lfData, #lfViz').removeClass("hidden")
+            $('#onchoSummary, #onchoData, #onchoViz, #schistoSummary, #schistoData, #schistoViz').addClass("hidden")
         }
     });
 
