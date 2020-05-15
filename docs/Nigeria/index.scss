@@ -1,0 +1,197 @@
+//global
+body {
+    font-family: "Noto Sans", sans-serif !important;
+    font-size: 1.1rem;
+    color: #4E4E4E;
+}
+
+.jumbotron {
+    text-align: center;
+    padding: 1rem 0rem 1rem 0rem;
+    background-color: transparent;
+    margin: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card {
+    border: none;
+    background-color: transparent;
+}
+
+.card-body {
+    padding: 0rem;
+
+    .card-title {
+        color: #2C3F4D;
+        font-size: 1.6rem;
+        margin: 0rem;
+        padding: 1rem 0rem 0.5rem 0rem;
+    }
+}
+
+img {
+    border-radius: 1rem !important;
+    transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+    &:hover {
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.05) !important;
+        transform: translate(0px, -3px);
+        transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+    }
+}
+
+a {
+    color: #A7EAFF;
+    text-decoration: none;
+
+    &:hover {
+        color: #02C2FF;
+        text-decoration: none;
+    }
+}
+
+.serif, .serif-sub {
+    font-size: 3rem;
+    font-family: "Merriweather";
+    font-weight: bold;
+}
+
+.serif-sub {
+    font-size: 2rem;
+}
+
+//top section / nav
+.hero {
+    display: flex;
+    align-items: center;
+    background-image: url("images/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    
+    #hero-name {
+        color: #B32A33;
+    }
+
+    #hero-text {
+        color: black;
+        text-align: center;
+        font-size: 3rem;
+    }
+}
+
+#intro {
+    .row {
+        justify-content: space-evenly;
+    }
+}
+
+.detail-card {
+    margin-top: 5rem;
+}
+
+.nav-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 27%;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(0,0,0) !important;
+    transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+    &:hover {
+        transform: translate(0px, -2px);
+        transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+        color: #B32A33 !important;
+    }
+}
+
+.navbar-brand {
+    color: #B32A33 !important;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+//middle section
+#solution {
+    color: #FFFFFF;
+    background-color: #2C3F4D;
+    margin-top: 4rem;
+    padding-top: 1rem;
+    padding-bottom:5rem;
+}
+
+#solution-img {
+    border-radius: 1rem;
+}
+
+#solution-header {
+    padding: 2rem 0rem 2rem 0rem;
+}
+
+.btn {
+    background-color: #FFFFFF;
+    color: #2C3F4D;
+    font-weight: bold;
+    border-radius: 1rem;
+    border: none;
+    &:hover {
+        color: #2C3F4D;
+        background-color: #C7DBEB;
+    }
+    &:active {
+        color: #2C3F4D !important;
+        background-color: #8DA2B1 !important;
+        border: none !important;
+    }
+}
+
+//bottom section
+#contact {
+    background-color: #FFFFFF;
+    padding: 2rem 0rem 0rem 0rem;
+    
+    .jumbotron {
+        margin: 0rem;
+    }
+
+    .rounded {
+        border-radius: 100% !important;
+        margin-bottom: 1rem;
+    }
+
+    #contact-info {
+        .card {
+            padding: 2rem;
+
+            .contact-details {
+                margin: 0rem;
+                text-align: center;
+                
+                line-height: 0rem;
+            
+                h2 {
+                    margin: 0rem;
+                }
+                .email {
+                    color: #2C3F4D;
+                }
+            }
+        }
+    }
+
+    #link {
+        color: #032E4E;
+        &:hover {
+            color: #236596;
+        }
+    }
+}
+

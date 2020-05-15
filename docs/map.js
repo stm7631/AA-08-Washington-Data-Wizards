@@ -14,5 +14,5 @@ $(document).mousemove(function(e) {
 
 $('path').click(function () {
   var name = ($(this).data('info'));
-  window.location.href = name;
+  window.location.href = name + '/';
 });

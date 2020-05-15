@@ -1,0 +1,238 @@
+body {
+  font-family: "Noto Sans", sans-serif !important;
+  font-size: 1.1rem;
+  color: #4E4E4E;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.jumbotron {
+  text-align: center;
+  padding: 1rem 0rem 1rem 0rem;
+  background-color: transparent;
+  margin: 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card {
+  border: none;
+  background-color: transparent;
+}
+
+.card-body {
+  padding: 0rem;
+}
+
+.card-body .card-title {
+  color: #2C3F4D;
+  font-size: 1.6rem;
+  margin: 0rem;
+  padding: 1rem 0rem 0.5rem 0rem;
+}
+
+img {
+  border-radius: 1rem !important;
+  -webkit-transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+  transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+img:hover {
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05) !important;
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05) !important;
+  -webkit-transform: translate(0px, -3px);
+          transform: translate(0px, -3px);
+  -webkit-transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+  transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+a {
+  color: #A7EAFF;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #02C2FF;
+  text-decoration: none;
+}
+
+.serif, .serif-sub {
+  font-size: 3rem;
+  font-family: "Merriweather";
+  font-weight: bold;
+}
+
+.serif-sub {
+  font-size: 2rem;
+}
+
+#country-select {
+  text-align: center;
+  color: black !important;
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("images/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#map-header {
+  background-image: none;
+  height: auto;
+}
+
+.hero #hero-name {
+  color: #B32A33;
+}
+
+.hero #hero-text {
+  color: black;
+  text-align: center;
+  font-size: 3rem;
+}
+
+#intro .row {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.detail-card {
+  margin-top: 5rem;
+}
+
+.nav-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 27%;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: black !important;
+  -webkit-transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+  transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  -webkit-transform: translate(0px, -2px);
+          transform: translate(0px, -2px);
+  -webkit-transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+  transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+  color: #B32A33 !important;
+}
+
+.navbar-brand {
+  color: #B32A33 !important;
+}
+
+.navbar {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#solution {
+  color: #FFFFFF;
+  background-color: #2C3F4D;
+  padding-top: 1rem;
+  padding-bottom: 5rem;
+}
+
+.btn {
+  background-color: #FFFFFF;
+  color: #2C3F4D;
+  font-weight: bold;
+  border-radius: 1rem;
+  border: none;
+}
+
+.btn:hover {
+  color: #2C3F4D;
+  background-color: #C7DBEB;
+}
+
+.btn:active {
+  color: #2C3F4D !important;
+  background-color: #8DA2B1 !important;
+  border: none !important;
+}
+
+#contact {
+  background-color: #FFFFFF;
+  padding: 2rem 0rem 0rem 0rem;
+}
+
+#contact .jumbotron {
+  margin: 0rem;
+}
+
+#contact .rounded {
+  border-radius: 100% !important;
+  margin-bottom: 1rem;
+}
+
+#contact #contact-info .card {
+  padding: 2rem;
+}
+
+#contact #contact-info .card .contact-details {
+  margin: 0rem;
+  text-align: center;
+  line-height: 0rem;
+}
+
+#contact #contact-info .card .contact-details h2 {
+  margin: 0rem;
+}
+
+#contact #contact-info .card .contact-details .email {
+  color: #2C3F4D;
+}
+
+#contact #link {
+  color: #032E4E;
+}
+
+#contact #link:hover {
+  color: #236596;
+}
+/*# sourceMappingURL=index.css.map */
+
+#vizArea {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+#vizzes {
+  margin: 0 auto;
+}
