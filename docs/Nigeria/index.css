@@ -8,6 +8,10 @@ body {
   display: none !important;
 }
 
+.noviz {
+  visibility: hidden;
+}
+
 .jumbotron {
   text-align: center;
   padding: 1rem 0rem 1rem 0rem;
@@ -79,6 +83,7 @@ a:hover {
 #country-select {
   text-align: center;
   color: black !important;
+  margin-bottom: 2rem;
 }
 
 .hero {
@@ -229,10 +234,49 @@ a:hover {
 /*# sourceMappingURL=index.css.map */
 
 #vizArea {
-  margin-top: 2rem;
   width: 100%;
 }
 
 #vizzes {
   margin: 0 auto;
+}
+
+.cover {
+  position: fixed;
+  height: 1000vh;
+  width: 1000vw;
+  background-color: grey !important;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -60px;
+  margin-left: -60px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  z-index: 2;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.noScroll {
+  overflow: hidden;
 }

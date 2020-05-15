@@ -18,6 +18,12 @@
     <noscript>This website requires JavaScript!</noscript>
     <title>ESPEN Novel Applications</title>
 </head>
+<!-- Keep this script here for reloading purposes -->
+<script>
+    window.onbeforeunload = function () {
+        window.scrollTo(0,0)
+    }
+</script>
 
 <body>
     <div class="jumbotron jumbotron-fluid hero">
@@ -48,6 +54,8 @@
     <div id="country-select" class="container">
         <h4 class="serif-sub">Drug Administration by Disease in Nigeria</h4>
     </div>
+    <div class="cover"></div>
+    <div class="loader"></div>
     <div id="vizArea" class="d-inline-flex flex-row">
         <div id="sidebar" class="d-flex align-items-center flex-column">
             <div id="dropdown">
@@ -87,6 +95,7 @@
                         <param name='display_spinner' value='yes' />
                         <param name='display_overlay' value='yes' />
                         <param name='display_count' value='yes' />
+                        <!-- <param name='device' value='desktop' /> -->
                     </object>
                 </div>
                 <script type='text/javascript'>
@@ -110,7 +119,7 @@
                 </script>
 
                 <!-- SCHISTO -->
-                <div class='tableauPlaceholder hidden' id='schistoViz' style='position: relative'>
+                <div class='tableauPlaceholder' id='schistoViz' style='position: relative'>
                     <noscript>
                         <a href='#'>
                             <img alt=' '
@@ -131,6 +140,7 @@
                         <param name='display_spinner' value='yes' />
                         <param name='display_overlay' value='yes' />
                         <param name='display_count' value='yes' />
+                        <!-- <param name='device' value='desktop' /> -->
                     </object>
                 </div>
                 <script type='text/javascript'>
@@ -154,7 +164,7 @@
                 </script>
 
                 <!-- LF -->
-                <div class='tableauPlaceholder hidden' id='lfViz' style='position: relative'>
+                <div class='tableauPlaceholder' id='lfViz' style='position: relative'>
                     <noscript>
                         <a href='#'>
                             <img alt=' '
@@ -176,6 +186,7 @@
                         <param name='display_spinner' value='yes' />
                         <param name='display_overlay' value='yes' />
                         <param name='display_count' value='yes' />
+                        <!-- <param name='device' value='desktop' /> -->
                     </object>
                 </div>
                 <script type='text/javascript'>
@@ -200,8 +211,9 @@
             </div>
         </section>
     </div>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-	<script src="index.js"></script>
 </body>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="index.js"></script>
 
 </html>
