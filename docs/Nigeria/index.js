@@ -1,10 +1,8 @@
 // Weird bug occurs if I don't set a timer
-$('#onchoViz').addClass("noviz")
 $('html').addClass("noScroll")
 
 setTimeout(() => {
     $('#schistoViz, #lfViz').addClass("hidden")
-    $('#onchoViz').removeClass("noviz")
 
     $('#diseases').on('change', function () {
         if (this.value == "oncho") {
@@ -21,4 +19,4 @@ setTimeout(() => {
 
     $('html').removeClass("noScroll")
     $('.cover, .loader').remove()
-}, 10000);
+}, 3000);

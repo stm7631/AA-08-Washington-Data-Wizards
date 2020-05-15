@@ -5,11 +5,9 @@ body {
 }
 
 .hidden {
-  display: none !important;
-}
-
-.noviz {
-  visibility: hidden;
+  position: fixed !important;
+  left: 9999px !important;
+  top: 0px !important;
 }
 
 .jumbotron {
@@ -279,4 +277,9 @@ a:hover {
 
 .noScroll {
   overflow: hidden;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
