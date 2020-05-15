@@ -14,5 +14,10 @@ $(document).mousemove(function(e) {
 
 $('path').click(function () {
   var name = ($(this).data('info'));
-  window.location.href = name + '/';
+
+  if (name == "Nigeria") {
+    window.location.href = 'Nigeria/';
+  } else {
+    window.location.href = 'under_construction.html';
+  }
 });
