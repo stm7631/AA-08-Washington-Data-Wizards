@@ -2,6 +2,7 @@ html {
     height: 100%;
 }
 
+
 #body {
     height: 100%;   
     overflow: hidden;  /*makes the body non-scrollable (we will add scrolling to the sidebar and main content containers)*/
