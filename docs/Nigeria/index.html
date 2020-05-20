@@ -67,80 +67,60 @@
                 </select>
             </div>
             <div>
-                <h4 class="mt-3"><b>Executive Summary</b></h4>
-                <!-- ONCHO -->
-                <p id="onchoSummary">
-                    <b>Ogun</b> - A lot of drugs per person treated, but a low MDA coverage percentage. Need to
-                    distribute drugs better.
-                </p>
-
-                <!-- SCHISTO -->
-                <p id="schistoSummary" class="hidden">
-                    <b>Taraba</b> - Low drug procurement rate and low coverage. They need to procure more drugs.<br><br>
-                    <b>Federal Capital Territory</b> - Procuring many drugs but maintaining a low coverage rate. They
-                    need to improve distribution. <br><br>
-                    <b>Osun</b> - They are procuring more drugs than average compared to the people treated in MDA, but
-                    they have low MDA coverage. They need to improve distribution.
-                </p>
-
-                <!-- LF -->
-                <p id="lfSummary" class="hidden">
-                    <b>Ogun</b> - A lot of drugs per person treated, but a low MDA coverage percentage. Need to
-                    distribute drugs better.<br><br>
-                    <b>Oyo</b> - A lot of drugs per person treated, but a low MDA coverage percentage. Need to
-                    distribute drugs better.
-                <h4 class="mt-3"><b>Definitions</b></h4>
                 <div id="accordion" class="flex-fill">
+                    <h4 id="dataInfo" class="mt-3"><b>Oncho Specific Information</b></h4>
                     <div class="card">
                         <div class="card-header" id="headingOne">
                             <h5 class="mb-0">
                                 <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
                                     aria-expanded="true" aria-controls="collapseOne">
-                                    Disease Vocabulary
+                                    Executive Summary
                                 </button>
                             </h5>
                         </div>
 
                         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <div id="vocab" class="card-body">
-                                <p>
-                                    <b>Onchocerciasis</b> (Oncho) <br>
-                                    <b>Schistosomiasis</b> (Schisto) <br>
-                                    <b>Lymphatic Filariasis</b> (LF)
+                                <!-- ONCHO -->
+                                <p id="onchoSummary">
+                                    <b>Ogun</b> - A lot of drugs per person treated, but a low MDA coverage percentage.
+                                    Need to
+                                    distribute drugs better.
                                 </p>
+
+                                <!-- SCHISTO -->
+                                <p id="schistoSummary" class="hidden">
+                                    <b>Taraba</b> - Low drug procurement rate and low coverage. They need to procure
+                                    more drugs.<br><br>
+                                    <b>Federal Capital Territory</b> - Procuring many drugs but maintaining a low
+                                    coverage rate. They
+                                    need to improve distribution. <br><br>
+                                    <b>Osun</b> - They are procuring more drugs than average compared to the people
+                                    treated in MDA, but
+                                    they have low MDA coverage. They need to improve distribution.
+                                </p>
+
+                                <!-- LF -->
+                                <p id="lfSummary" class="hidden">
+                                    <b>Ogun</b> - A lot of drugs per person treated, but a low MDA coverage percentage.
+                                    Need to
+                                    distribute drugs better.<br><br>
+                                    <b>Oyo</b> - A lot of drugs per person treated, but a low MDA coverage percentage.
+                                    Need to
+                                    distribute drugs better.
                             </div>
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-header" id="headingTwo">
+                        <div class="card-header" id="headingFour">
                             <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
-                                    aria-expanded="false" aria-controls="collapseTwo">
-                                    Drug Vocabulary
+                                <button class="btn btn-link collapsed" data-toggle="collapse"
+                                    data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Data Information
                                 </button>
                             </h5>
                         </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                            <div id="vocab" class="card-body">
-                                <p>
-                                    <b>Albendazole</b> (ALB) <br>
-                                    <b>Ivermectin</b> (IVM) <br>
-                                    <b>Praziquantel</b> (PZQ)
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingThree">
-                            <h5 class="mb-0">
-                                <button id="dataInfo" class="btn btn-link collapsed" data-toggle="collapse"
-                                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Data Information (Oncho)
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                            data-parent="#accordion">
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
                             <div id="vocab" class="card-body">
                                 <!-- ONCHO -->
                                 <span id="onchoData">
@@ -163,6 +143,47 @@
                                     Notice there is no <b>Procurement / Population Requiring Treatment</b> map. The ALB
                                     procured for LF has missing data in the required treatment field.
                                 </span>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <h4 class="mt-3"><b>Definitions</b></h4>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                    aria-expanded="false" aria-controls="collapseTwo">
+                                    Disease Vocabulary
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div id="vocab" class="card-body">
+                                <p>
+                                    <b>Onchocerciasis</b> (Oncho) <br>
+                                    <b>Schistosomiasis</b> (Schisto) <br>
+                                    <b>Lymphatic Filariasis</b> (LF)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse"
+                                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Drug Vocabulary
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                            data-parent="#accordion">
+                            <div id="vocab" class="card-body">
+                                <p>
+                                    <b>Albendazole</b> (ALB) <br>
+                                    <b>Ivermectin</b> (IVM) <br>
+                                    <b>Praziquantel</b> (PZQ)
+                                </p>
                             </div>
                         </div>
                     </div>
