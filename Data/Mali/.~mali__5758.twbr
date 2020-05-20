@@ -1,0 +1,1532 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20191.20.0315.1406                               -->
+<workbook source-build='2019.1.14 (20191.20.0315.1406)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SheetIdentifierTracking />
+    <SpatialFileLayer />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='filtered_mali_data1.csv+ (Multiple Connections)' inline='true' name='federated.0aea41c1u53zgo115ka0n1titk04' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='filtered_mali_data1' name='textscan.1vsxwz11smvkeq15moxsa14dh3rn'>
+            <connection class='textscan' directory='/Users/daniellee/Documents/Informatics/winter-2020/info-490/AA-08-Washington-Data-Wizards/Data/Mali' filename='filtered_mali_data1.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='AFRO_IUs_201812' name='ogrdirect.0ll5om60fabquw19tql3s10vm018'>
+            <connection class='ogrdirect' directory='/Users/daniellee/Documents/Informatics/winter-2020/info-490/AA-08-Washington-Data-Wizards/Data/Mali/AFRO_IUs' filename='AFRO_IUs_201812.shp' ogr-grid-shift-folder='/Applications/Tableau Desktop 2019.1.app/Contents/install/local/proj4' password='' server='' tablename='' />
+          </named-connection>
+        </named-connections>
+        <relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[filtered_mali_data1.csv].[district_names]' />
+              <expression op='[AFRO_IUs_201812.shp].[ADMIN2]' />
+            </expression>
+          </clause>
+          <relation connection='textscan.1vsxwz11smvkeq15moxsa14dh3rn' name='filtered_mali_data1.csv' table='[filtered_mali_data1#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='state_names' ordinal='0' />
+              <column datatype='string' name='district_names' ordinal='1' />
+              <column datatype='integer' name='population' ordinal='2' />
+              <column datatype='integer' name='total_treatment_alb_mbd' ordinal='3' />
+              <column datatype='integer' name='total_target_alb' ordinal='4' />
+              <column datatype='integer' name='total_target_mbd' ordinal='5' />
+              <column datatype='integer' name='lf_alb_total_procured' ordinal='6' />
+              <column datatype='integer' name='sac_alb_total_procured' ordinal='7' />
+              <column datatype='integer' name='sth_mbd_total_procured' ordinal='8' />
+              <column datatype='real' name='pzq_total_treatment' ordinal='9' />
+              <column datatype='real' name='pzq_total_procured' ordinal='10' />
+              <column datatype='integer' name='ivm_total_treatment' ordinal='11' />
+              <column datatype='real' name='ivm_total_procured' ordinal='12' />
+            </columns>
+          </relation>
+          <relation connection='ogrdirect.0ll5om60fabquw19tql3s10vm018' name='AFRO_IUs_201812.shp' table='[AFRO_IUs_201812.shp]' type='table'>
+            <columns>
+              <column datatype='string' name='CONTINENT' ordinal='0' />
+              <column datatype='string' name='REGION' ordinal='1' />
+              <column datatype='string' name='WHO_REGION' ordinal='2' />
+              <column datatype='string' name='ADMIN0' ordinal='3' />
+              <column datatype='integer' name='ADMIN0ID' ordinal='4' />
+              <column datatype='string' name='ADMIN0_FIP' ordinal='5' />
+              <column datatype='string' name='ADMIN0ISO2' ordinal='6' />
+              <column datatype='string' name='ADMIN0ISO3' ordinal='7' />
+              <column datatype='string' name='ADMIN1' ordinal='8' />
+              <column datatype='integer' name='ADMIN1ID' ordinal='9' />
+              <column datatype='string' name='ADMIN2' ordinal='10' />
+              <column datatype='integer' name='ADMIN2ID' ordinal='11' />
+              <column datatype='string' name='Alt_ADMIN2' ordinal='12' />
+              <column datatype='string' name='ADMIN3' ordinal='13' />
+              <column datatype='integer' name='ADMIN3ID' ordinal='14' />
+              <column datatype='string' name='IUs_ADM' ordinal='15' />
+              <column datatype='string' name='IU_ID' ordinal='16' />
+              <column datatype='string' name='IUs_NAME' ordinal='17' />
+              <column datatype='integer' name='LASTUPDATE' ordinal='18' />
+              <column datatype='string' name='CARTO' ordinal='19' />
+              <column datatype='integer' name='IU_ID2' ordinal='20' />
+              <column datatype='string' name='Alt_IU_Nam' ordinal='21' />
+              <column datatype='real' name='Shape_Leng' ordinal='22' />
+              <column datatype='real' name='Shape_Le_1' ordinal='23' />
+              <column datatype='real' name='Shape_Area' ordinal='24' />
+              <column datatype='spatial' name='Geometry' ordinal='25' />
+            </columns>
+          </relation>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[filtered_mali_data1.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>state_names</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[state_names]</local-name>
+            <parent-name>[filtered_mali_data1.csv]</parent-name>
+            <remote-alias>state_names</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>district_names</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[district_names]</local-name>
+            <parent-name>[filtered_mali_data1.csv]</parent-name>
+            <remote-alias>district_names</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>population</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[population]</local-name>
+            <parent-name>[filtered_mali_data1.csv]</parent-name>
+            <remote-alias>population</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_treatment_alb_mbd</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_treatment_alb_mbd]</local-name>
+            <parent-name>[filtered_mali_data1.csv]</parent-name>
+            <remote-alias>total_treatment_alb_mbd</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_target_alb</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_target_alb]</local-name>
+            <parent-name>[filtered_mali_data1.csv]</parent-name>
+            <remote-alias>total_target_alb</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_target_mbd</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_target_mbd]</local-name>
+            <parent-name>[filtered_mali_data1.csv]</parent-name>
+            <remote-alias>total_target_mbd</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lf_alb_total_procured</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[lf_alb_total_procured]</local-name>
+            <parent-name>[filtered_mali_data1.csv]</parent-name>
+            <remote-alias>lf_alb_total_procured</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sac_alb_total_procured</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[sac_alb_total_procured]</local-name>
+            <parent-name>[filtered_mali_data1.csv]</parent-name>
+            <remote-alias>sac_alb_total_procured</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sth_mbd_total_procured</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[sth_mbd_total_procured]</local-name>
+            <parent-name>[filtered_mali_data1.csv]</parent-name>
+            <remote-alias>sth_mbd_total_procured</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pzq_total_treatment</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pzq_total_treatment]</local-name>
+            <parent-name>[filtered_mali_data1.csv]</parent-name>
+            <remote-alias>pzq_total_treatment</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pzq_total_procured</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pzq_total_procured]</local-name>
+            <parent-name>[filtered_mali_data1.csv]</parent-name>
+            <remote-alias>pzq_total_procured</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ivm_total_treatment</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ivm_total_treatment]</local-name>
+            <parent-name>[filtered_mali_data1.csv]</parent-name>
+            <remote-alias>ivm_total_treatment</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ivm_total_procured</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ivm_total_procured]</local-name>
+            <parent-name>[filtered_mali_data1.csv]</parent-name>
+            <remote-alias>ivm_total_procured</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CONTINENT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CONTINENT]</local-name>
+            <parent-name>[AFRO_IUs_201812.shp]</parent-name>
+            <remote-alias>CONTINENT</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>REGION</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[REGION]</local-name>
+            <parent-name>[AFRO_IUs_201812.shp]</parent-name>
+            <remote-alias>REGION</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WHO_REGION</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[WHO_REGION]</local-name>
+            <parent-name>[AFRO_IUs_201812.shp]</parent-name>
+            <remote-alias>WHO_REGION</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ADMIN0</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ADMIN0]</local-name>
+            <parent-name>[AFRO_IUs_201812.shp]</parent-name>
+            <remote-alias>ADMIN0</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ADMIN0ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ADMIN0ID]</local-name>
+            <parent-name>[AFRO_IUs_201812.shp]</parent-name>
+            <remote-alias>ADMIN0ID</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ADMIN0_FIP</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ADMIN0_FIP]</local-name>
+            <parent-name>[AFRO_IUs_201812.shp]</parent-name>
+            <remote-alias>ADMIN0_FIP</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ADMIN0ISO2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ADMIN0ISO2]</local-name>
+            <parent-name>[AFRO_IUs_201812.shp]</parent-name>
+            <remote-alias>ADMIN0ISO2</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ADMIN0ISO3</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ADMIN0ISO3]</local-name>
+            <parent-name>[AFRO_IUs_201812.shp]</parent-name>
+            <remote-alias>ADMIN0ISO3</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ADMIN1</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ADMIN1]</local-name>
+            <parent-name>[AFRO_IUs_201812.shp]</parent-name>
+            <remote-alias>ADMIN1</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ADMIN1ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ADMIN1ID]</local-name>
+            <parent-name>[AFRO_IUs_201812.shp]</parent-name>
+            <remote-alias>ADMIN1ID</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ADMIN2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ADMIN2]</local-name>
+            <parent-name>[AFRO_IUs_201812.shp]</parent-name>
+            <remote-alias>ADMIN2</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ADMIN2ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ADMIN2ID]</local-name>
+            <parent-name>[AFRO_IUs_201812.shp]</parent-name>
+            <remote-alias>ADMIN2ID</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Alt_ADMIN2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Alt_ADMIN2]</local-name>
+            <parent-name>[AFRO_IUs_201812.shp]</parent-name>
+            <remote-alias>Alt_ADMIN2</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ADMIN3</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ADMIN3]</local-name>
+            <parent-name>[AFRO_IUs_201812.shp]</parent-name>
+            <remote-alias>ADMIN3</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ADMIN3ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ADMIN3ID]</local-name>
+            <parent-name>[AFRO_IUs_201812.shp]</parent-name>
+            <remote-alias>ADMIN3ID</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IUs_ADM</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[IUs_ADM]</local-name>
+            <parent-name>[AFRO_IUs_201812.shp]</parent-name>
+            <remote-alias>IUs_ADM</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IU_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[IU_ID]</local-name>
+            <parent-name>[AFRO_IUs_201812.shp]</parent-name>
+            <remote-alias>IU_ID</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IUs_NAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[IUs_NAME]</local-name>
+            <parent-name>[AFRO_IUs_201812.shp]</parent-name>
+            <remote-alias>IUs_NAME</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LASTUPDATE</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[LASTUPDATE]</local-name>
+            <parent-name>[AFRO_IUs_201812.shp]</parent-name>
+            <remote-alias>LASTUPDATE</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CARTO</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CARTO]</local-name>
+            <parent-name>[AFRO_IUs_201812.shp]</parent-name>
+            <remote-alias>CARTO</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IU_ID2</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[IU_ID2]</local-name>
+            <parent-name>[AFRO_IUs_201812.shp]</parent-name>
+            <remote-alias>IU_ID2</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Alt_IU_Nam</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Alt_IU_Nam]</local-name>
+            <parent-name>[AFRO_IUs_201812.shp]</parent-name>
+            <remote-alias>Alt_IU_Nam</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Shape_Leng</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Shape_Leng]</local-name>
+            <parent-name>[AFRO_IUs_201812.shp]</parent-name>
+            <remote-alias>Shape_Leng</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Shape_Le_1</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Shape_Le_1]</local-name>
+            <parent-name>[AFRO_IUs_201812.shp]</parent-name>
+            <remote-alias>Shape_Le_1</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Shape_Area</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Shape_Area]</local-name>
+            <parent-name>[AFRO_IUs_201812.shp]</parent-name>
+            <remote-alias>Shape_Area</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Geometry</remote-name>
+            <remote-type>8</remote-type>
+            <local-name>[Geometry]</local-name>
+            <parent-name>[AFRO_IUs_201812.shp]</parent-name>
+            <remote-alias>Geometry</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>spatial</local-type>
+            <aggregation>Collect</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Admin0Id' datatype='integer' name='[ADMIN0ID]' role='dimension' type='ordinal' />
+      <column caption='Admin0Iso2' datatype='string' name='[ADMIN0ISO2]' role='dimension' type='nominal' />
+      <column caption='Admin0Iso3' datatype='string' name='[ADMIN0ISO3]' role='dimension' type='nominal' />
+      <column caption='Admin0' datatype='string' name='[ADMIN0]' role='dimension' type='nominal' />
+      <column caption='Admin0 Fip' datatype='string' name='[ADMIN0_FIP]' role='dimension' type='nominal' />
+      <column caption='Admin1Id' datatype='integer' name='[ADMIN1ID]' role='dimension' type='ordinal' />
+      <column caption='Admin1' datatype='string' name='[ADMIN1]' role='dimension' type='nominal' />
+      <column caption='Admin2Id' datatype='integer' name='[ADMIN2ID]' role='dimension' type='ordinal' />
+      <column caption='District Name' datatype='string' name='[ADMIN2]' role='dimension' type='nominal' />
+      <column caption='Admin3Id' datatype='integer' name='[ADMIN3ID]' role='dimension' type='ordinal' />
+      <column caption='Admin3' datatype='string' name='[ADMIN3]' role='dimension' type='nominal' />
+      <column caption='Alt ADMIN2' datatype='string' name='[Alt_ADMIN2]' role='dimension' type='nominal' />
+      <column caption='Alt IU Nam' datatype='string' name='[Alt_IU_Nam]' role='dimension' type='nominal' />
+      <column caption='Carto' datatype='string' name='[CARTO]' role='dimension' type='nominal' />
+      <column caption='Continent' datatype='string' name='[CONTINENT]' role='dimension' type='nominal' />
+      <column caption='lf_yld' datatype='real' name='[Calculation_405183275285831680]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='315.77913705100000' />
+      </column>
+      <column caption='sch_yld' datatype='real' name='[Calculation_405183275285979137]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='41.2194503323' />
+      </column>
+      <column caption='oncho_yld' datatype='real' name='[Calculation_405183275286048770]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='0.454152607461' />
+      </column>
+      <column caption='ivm_ratio' datatype='real' name='[Calculation_405183275286450179]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[ivm_total_procured]/[ivm_total_treatment]' />
+      </column>
+      <column caption='alb_ratio' datatype='real' name='[Calculation_405183275286626308]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[lf_alb_total_procured]/[total_treatment_alb_mbd]' />
+      </column>
+      <column caption='pzq_ratio' datatype='real' name='[Calculation_405183275286786053]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[pzq_total_procured]/[pzq_total_treatment]' />
+      </column>
+      <column caption='lf_YLD' datatype='real' name='[Calculation_405183275289088006]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[population]/[Calculation_405183275285831680]' />
+      </column>
+      <column caption='sch_YLD' datatype='real' name='[Calculation_405183275289333767]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[population]/[Calculation_405183275285979137]' />
+      </column>
+      <column caption='oncho_YLD' datatype='real' name='[Calculation_405183275289399304]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[population]/[Calculation_405183275286048770]' />
+      </column>
+      <column caption='ivm/yld' datatype='real' name='[Calculation_405183275291652105]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Calculation_405183275286450179]/[Calculation_405183275289399304]' />
+      </column>
+      <column caption='pzq/yld' datatype='real' name='[Calculation_405183275295129610]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Calculation_405183275286786053]/[Calculation_405183275289333767]' />
+      </column>
+      <column caption='Iu Id2' datatype='integer' name='[IU_ID2]' role='dimension' type='ordinal' />
+      <column caption='Iu Id' datatype='string' name='[IU_ID]' role='dimension' type='nominal' />
+      <column caption='IUs ADM' datatype='string' name='[IUs_ADM]' role='dimension' type='nominal' />
+      <column caption='IUs NAME' datatype='string' name='[IUs_NAME]' role='dimension' type='nominal' />
+      <column caption='Lastupdate' datatype='integer' name='[LASTUPDATE]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Region' datatype='string' name='[REGION]' role='dimension' type='nominal' />
+      <column caption='Shape Area' datatype='real' name='[Shape_Area]' role='measure' type='quantitative' />
+      <column caption='Shape Le 1' datatype='real' name='[Shape_Le_1]' role='measure' type='quantitative' />
+      <column caption='Shape Leng' datatype='real' name='[Shape_Leng]' role='measure' type='quantitative' />
+      <column caption='Who Region' datatype='string' name='[WHO_REGION]' role='dimension' type='nominal' />
+      <column caption='District Names' datatype='string' name='[district_names]' role='dimension' type='nominal' />
+      <column caption='Ivm Total Procured' datatype='real' name='[ivm_total_procured]' role='measure' type='quantitative' />
+      <column caption='Ivm Total Treatment' datatype='integer' name='[ivm_total_treatment]' role='measure' type='quantitative' />
+      <column caption='Lf Alb Total Procured' datatype='integer' name='[lf_alb_total_procured]' role='measure' type='quantitative' />
+      <column caption='Population' datatype='integer' name='[population]' role='measure' type='quantitative' />
+      <column caption='Pzq Total Procured' datatype='real' name='[pzq_total_procured]' role='measure' type='quantitative' />
+      <column caption='Pzq Total Treatment' datatype='real' name='[pzq_total_treatment]' role='measure' type='quantitative' />
+      <column caption='Sac Alb Total Procured' datatype='integer' name='[sac_alb_total_procured]' role='measure' type='quantitative' />
+      <column caption='State Names' datatype='string' name='[state_names]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Sth Mbd Total Procured' datatype='integer' name='[sth_mbd_total_procured]' role='measure' type='quantitative' />
+      <column caption='Total Target Alb' datatype='integer' name='[total_target_alb]' role='measure' type='quantitative' />
+      <column caption='Total Target Mbd' datatype='integer' name='[total_target_mbd]' role='measure' type='quantitative' />
+      <column caption='Total Treatment Alb Mbd' datatype='integer' name='[total_treatment_alb_mbd]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.520095' measure-ordering='alphabetic' measure-percentage='0.479905' show-structure='true' user-set-layout='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='state_names' />
+        <field-sort-custom-order field='district_names' />
+        <field-sort-custom-order field='population' />
+        <field-sort-custom-order field='total_treatment_alb_mbd' />
+        <field-sort-custom-order field='total_target_alb' />
+        <field-sort-custom-order field='total_target_mbd' />
+        <field-sort-custom-order field='lf_alb_total_procured' />
+        <field-sort-custom-order field='sac_alb_total_procured' />
+        <field-sort-custom-order field='sth_mbd_total_procured' />
+        <field-sort-custom-order field='Calculation_405183275286450179' />
+        <field-sort-custom-order field='Calculation_405183275286626308' />
+        <field-sort-custom-order field='Calculation_405183275286786053' />
+        <field-sort-custom-order field='pzq_total_treatment' />
+        <field-sort-custom-order field='pzq_total_procured' />
+        <field-sort-custom-order field='Calculation_405183275289088006' />
+        <field-sort-custom-order field='Calculation_405183275289333767' />
+        <field-sort-custom-order field='Calculation_405183275289399304' />
+        <field-sort-custom-order field='ivm_total_treatment' />
+        <field-sort-custom-order field='ivm_total_procured' />
+        <field-sort-custom-order field='Calculation_405183275291652105' />
+        <field-sort-custom-order field='Calculation_405183275295129610' />
+        <field-sort-custom-order field='Calculation_405183275285831680' />
+        <field-sort-custom-order field='Calculation_405183275285979137' />
+        <field-sort-custom-order field='Calculation_405183275286048770' />
+        <field-sort-custom-order field='CONTINENT' />
+        <field-sort-custom-order field='REGION' />
+        <field-sort-custom-order field='WHO_REGION' />
+        <field-sort-custom-order field='ADMIN0' />
+        <field-sort-custom-order field='ADMIN0ID' />
+        <field-sort-custom-order field='ADMIN0_FIP' />
+        <field-sort-custom-order field='ADMIN0ISO2' />
+        <field-sort-custom-order field='ADMIN0ISO3' />
+        <field-sort-custom-order field='ADMIN1' />
+        <field-sort-custom-order field='ADMIN1ID' />
+        <field-sort-custom-order field='ADMIN2' />
+        <field-sort-custom-order field='ADMIN2ID' />
+        <field-sort-custom-order field='Alt_ADMIN2' />
+        <field-sort-custom-order field='ADMIN3' />
+        <field-sort-custom-order field='ADMIN3ID' />
+        <field-sort-custom-order field='IUs_ADM' />
+        <field-sort-custom-order field='IU_ID' />
+        <field-sort-custom-order field='IUs_NAME' />
+        <field-sort-custom-order field='LASTUPDATE' />
+        <field-sort-custom-order field='CARTO' />
+        <field-sort-custom-order field='IU_ID2' />
+        <field-sort-custom-order field='Alt_IU_Nam' />
+        <field-sort-custom-order field='Shape_Leng' />
+        <field-sort-custom-order field='Shape_Le_1' />
+        <field-sort-custom-order field='Shape_Area' />
+        <field-sort-custom-order field='Geometry' />
+      </field-sort-info>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='alb_ratio'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='filtered_mali_data1.csv+ (Multiple Connections)' name='federated.0aea41c1u53zgo115ka0n1titk04' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0aea41c1u53zgo115ka0n1titk04'>
+            <column caption='District Name' datatype='string' name='[ADMIN2]' role='dimension' type='nominal' />
+            <column caption='alb_ratio' datatype='real' name='[Calculation_405183275286626308]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[lf_alb_total_procured]/[total_treatment_alb_mbd]' />
+            </column>
+            <column datatype='spatial' name='[Geometry]' role='measure' type='nominal' />
+            <column-instance column='[ADMIN2]' derivation='Attribute' name='[attr:ADMIN2:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Geometry]' derivation='Collect' name='[clct:Geometry:nk]' pivot='key' type='nominal' />
+            <column caption='Lf Alb Total Procured' datatype='integer' name='[lf_alb_total_procured]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_405183275286626308]' derivation='None' name='[none:Calculation_405183275286626308:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Treatment Alb Mbd' datatype='integer' name='[total_treatment_alb_mbd]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='tab_base' value='true' />
+            <format attr='enabled' id='um_lcover' value='true' />
+            <format attr='enabled' id='tab_coastline' value='false' />
+            <format attr='enabled' id='pp2_line' value='false' />
+            <format attr='enabled' id='light_adm0_bnd' value='false' />
+            <format attr='enabled' id='light_adm0_lbl' value='false' />
+            <format attr='enabled' id='um_adm0_bnd' value='true' />
+            <format attr='enabled' id='um_adm0_lbl' value='true' />
+            <format attr='enabled' id='light_pp2_statebounds' value='false' />
+            <format attr='enabled' id='light_pp2_statelabels' value='false' />
+            <format attr='enabled' id='pp2_adminlabels' value='false' />
+            <format attr='enabled' id='pp2_statebounds' value='true' />
+            <format attr='enabled' id='pp2_statelabels' value='true' />
+            <format attr='enabled' id='countybounds' value='false' />
+            <format attr='enabled' id='countylabels' value='false' />
+            <format attr='enabled' id='zipbounds' value='false' />
+            <format attr='enabled' id='ziplabels' value='false' />
+            <format attr='enabled' id='tab_areabounds' value='false' />
+            <format attr='enabled' id='tab_arealabels' value='false' />
+            <format attr='enabled' id='tab_msabounds' value='false' />
+            <format attr='enabled' id='tab_msalabels' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0aea41c1u53zgo115ka0n1titk04].[none:Calculation_405183275286626308:qk]' />
+              <lod column='[federated.0aea41c1u53zgo115ka0n1titk04].[clct:Geometry:nk]' />
+              <tooltip column='[federated.0aea41c1u53zgo115ka0n1titk04].[attr:ADMIN2:nk]' />
+              <geometry column='[federated.0aea41c1u53zgo115ka0n1titk04].[clct:Geometry:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0aea41c1u53zgo115ka0n1titk04].[Latitude (generated)]</rows>
+        <cols>[federated.0aea41c1u53zgo115ka0n1titk04].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{D099EABD-5452-43CD-9B64-3A473393AC43}' />
+    </worksheet>
+    <worksheet name='ivm/yld'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Onchocerciasis: IVM Procured vs. YLD</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='filtered_mali_data1.csv+ (Multiple Connections)' name='federated.0aea41c1u53zgo115ka0n1titk04' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0aea41c1u53zgo115ka0n1titk04'>
+            <column caption='oncho_yld' datatype='real' name='[Calculation_405183275286048770]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='0.454152607461' />
+            </column>
+            <column caption='ivm_ratio' datatype='real' name='[Calculation_405183275286450179]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[ivm_total_procured]/[ivm_total_treatment]' />
+            </column>
+            <column caption='oncho_YLD' datatype='real' name='[Calculation_405183275289399304]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[population]/[Calculation_405183275286048770]' />
+            </column>
+            <column caption='ivm/yld' datatype='real' name='[Calculation_405183275291652105]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Calculation_405183275286450179]/[Calculation_405183275289399304]' />
+            </column>
+            <column datatype='spatial' name='[Geometry]' role='measure' type='nominal' />
+            <column-instance column='[Calculation_405183275286450179]' derivation='Attribute' name='[attr:Calculation_405183275286450179:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[state_names]' derivation='Attribute' name='[attr:state_names:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Geometry]' derivation='Collect' name='[clct:Geometry:nk]' pivot='key' type='nominal' />
+            <column caption='Ivm Total Procured' datatype='real' name='[ivm_total_procured]' role='measure' type='quantitative' />
+            <column caption='Ivm Total Treatment' datatype='integer' name='[ivm_total_treatment]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_405183275291652105]' derivation='None' name='[none:Calculation_405183275291652105:qk]' pivot='key' type='quantitative' />
+            <column caption='Population' datatype='integer' name='[population]' role='measure' type='quantitative' />
+            <column caption='State Names' datatype='string' name='[state_names]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='tab_base' value='true' />
+            <format attr='enabled' id='um_lcover' value='true' />
+            <format attr='enabled' id='tab_coastline' value='false' />
+            <format attr='enabled' id='pp2_line' value='false' />
+            <format attr='enabled' id='light_adm0_bnd' value='false' />
+            <format attr='enabled' id='light_adm0_lbl' value='false' />
+            <format attr='enabled' id='um_adm0_bnd' value='true' />
+            <format attr='enabled' id='um_adm0_lbl' value='true' />
+            <format attr='enabled' id='light_pp2_statebounds' value='false' />
+            <format attr='enabled' id='light_pp2_statelabels' value='false' />
+            <format attr='enabled' id='pp2_adminlabels' value='false' />
+            <format attr='enabled' id='pp2_statebounds' value='true' />
+            <format attr='enabled' id='pp2_statelabels' value='true' />
+            <format attr='enabled' id='countybounds' value='false' />
+            <format attr='enabled' id='countylabels' value='false' />
+            <format attr='enabled' id='zipbounds' value='false' />
+            <format attr='enabled' id='ziplabels' value='false' />
+            <format attr='enabled' id='tab_areabounds' value='false' />
+            <format attr='enabled' id='tab_arealabels' value='false' />
+            <format attr='enabled' id='tab_msabounds' value='false' />
+            <format attr='enabled' id='tab_msalabels' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0aea41c1u53zgo115ka0n1titk04].[none:Calculation_405183275291652105:qk]' />
+              <lod column='[federated.0aea41c1u53zgo115ka0n1titk04].[clct:Geometry:nk]' />
+              <tooltip column='[federated.0aea41c1u53zgo115ka0n1titk04].[attr:state_names:nk]' />
+              <tooltip column='[federated.0aea41c1u53zgo115ka0n1titk04].[attr:Calculation_405183275286450179:qk]' />
+              <geometry column='[federated.0aea41c1u53zgo115ka0n1titk04].[clct:Geometry:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0aea41c1u53zgo115ka0n1titk04].[Latitude (generated)]</rows>
+        <cols>[federated.0aea41c1u53zgo115ka0n1titk04].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{8C87B62F-F95E-4E5F-A601-170735830004}' />
+    </worksheet>
+    <worksheet name='ivm_ratio'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='filtered_mali_data1.csv+ (Multiple Connections)' name='federated.0aea41c1u53zgo115ka0n1titk04' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0aea41c1u53zgo115ka0n1titk04'>
+            <column caption='District Name' datatype='string' name='[ADMIN2]' role='dimension' type='nominal' />
+            <column caption='ivm_ratio' datatype='real' name='[Calculation_405183275286450179]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[ivm_total_procured]/[ivm_total_treatment]' />
+            </column>
+            <column datatype='spatial' name='[Geometry]' role='measure' type='nominal' />
+            <column-instance column='[ADMIN2]' derivation='Attribute' name='[attr:ADMIN2:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Geometry]' derivation='Collect' name='[clct:Geometry:nk]' pivot='key' type='nominal' />
+            <column caption='Ivm Total Procured' datatype='real' name='[ivm_total_procured]' role='measure' type='quantitative' />
+            <column caption='Ivm Total Treatment' datatype='integer' name='[ivm_total_treatment]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_405183275286450179]' derivation='None' name='[none:Calculation_405183275286450179:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0aea41c1u53zgo115ka0n1titk04].[Longitude (generated)]' field-type='quantitative' max='833020.75971202203' min='-1482785.7655556013' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0aea41c1u53zgo115ka0n1titk04].[Latitude (generated)]' field-type='quantitative' max='2929182.6549154022' min='1134796.7183558326' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='tab_base' value='true' />
+            <format attr='enabled' id='um_lcover' value='true' />
+            <format attr='enabled' id='tab_coastline' value='false' />
+            <format attr='enabled' id='pp2_line' value='false' />
+            <format attr='enabled' id='light_adm0_bnd' value='false' />
+            <format attr='enabled' id='light_adm0_lbl' value='false' />
+            <format attr='enabled' id='um_adm0_bnd' value='true' />
+            <format attr='enabled' id='um_adm0_lbl' value='true' />
+            <format attr='enabled' id='light_pp2_statebounds' value='false' />
+            <format attr='enabled' id='light_pp2_statelabels' value='false' />
+            <format attr='enabled' id='pp2_adminlabels' value='false' />
+            <format attr='enabled' id='pp2_statebounds' value='true' />
+            <format attr='enabled' id='pp2_statelabels' value='true' />
+            <format attr='enabled' id='countybounds' value='false' />
+            <format attr='enabled' id='countylabels' value='false' />
+            <format attr='enabled' id='zipbounds' value='false' />
+            <format attr='enabled' id='ziplabels' value='false' />
+            <format attr='enabled' id='tab_areabounds' value='false' />
+            <format attr='enabled' id='tab_arealabels' value='false' />
+            <format attr='enabled' id='tab_msabounds' value='false' />
+            <format attr='enabled' id='tab_msalabels' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0aea41c1u53zgo115ka0n1titk04].[none:Calculation_405183275286450179:qk]' />
+              <lod column='[federated.0aea41c1u53zgo115ka0n1titk04].[clct:Geometry:nk]' />
+              <tooltip column='[federated.0aea41c1u53zgo115ka0n1titk04].[attr:ADMIN2:nk]' />
+              <geometry column='[federated.0aea41c1u53zgo115ka0n1titk04].[clct:Geometry:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0aea41c1u53zgo115ka0n1titk04].[Latitude (generated)]</rows>
+        <cols>[federated.0aea41c1u53zgo115ka0n1titk04].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{E5452841-D085-4ED3-8240-F3CFE68BC2CE}' />
+    </worksheet>
+    <worksheet name='lf_yld'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='filtered_mali_data1.csv+ (Multiple Connections)' name='federated.0aea41c1u53zgo115ka0n1titk04' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0aea41c1u53zgo115ka0n1titk04'>
+            <column caption='District Name' datatype='string' name='[ADMIN2]' role='dimension' type='nominal' />
+            <column caption='lf_yld' datatype='real' name='[Calculation_405183275285831680]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='315.77913705100000' />
+            </column>
+            <column caption='lf_YLD' datatype='real' name='[Calculation_405183275289088006]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[population]/[Calculation_405183275285831680]' />
+            </column>
+            <column datatype='spatial' name='[Geometry]' role='measure' type='nominal' />
+            <column-instance column='[ADMIN2]' derivation='Attribute' name='[attr:ADMIN2:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Geometry]' derivation='Collect' name='[clct:Geometry:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_405183275289088006]' derivation='None' name='[none:Calculation_405183275289088006:qk]' pivot='key' type='quantitative' />
+            <column caption='Population' datatype='integer' name='[population]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='tab_base' value='true' />
+            <format attr='enabled' id='um_lcover' value='true' />
+            <format attr='enabled' id='tab_coastline' value='false' />
+            <format attr='enabled' id='pp2_line' value='false' />
+            <format attr='enabled' id='light_adm0_bnd' value='false' />
+            <format attr='enabled' id='light_adm0_lbl' value='false' />
+            <format attr='enabled' id='um_adm0_bnd' value='true' />
+            <format attr='enabled' id='um_adm0_lbl' value='true' />
+            <format attr='enabled' id='light_pp2_statebounds' value='false' />
+            <format attr='enabled' id='light_pp2_statelabels' value='false' />
+            <format attr='enabled' id='pp2_adminlabels' value='false' />
+            <format attr='enabled' id='pp2_statebounds' value='true' />
+            <format attr='enabled' id='pp2_statelabels' value='true' />
+            <format attr='enabled' id='countybounds' value='false' />
+            <format attr='enabled' id='countylabels' value='false' />
+            <format attr='enabled' id='zipbounds' value='false' />
+            <format attr='enabled' id='ziplabels' value='false' />
+            <format attr='enabled' id='tab_areabounds' value='false' />
+            <format attr='enabled' id='tab_arealabels' value='false' />
+            <format attr='enabled' id='tab_msabounds' value='false' />
+            <format attr='enabled' id='tab_msalabels' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0aea41c1u53zgo115ka0n1titk04].[none:Calculation_405183275289088006:qk]' />
+              <lod column='[federated.0aea41c1u53zgo115ka0n1titk04].[clct:Geometry:nk]' />
+              <tooltip column='[federated.0aea41c1u53zgo115ka0n1titk04].[attr:ADMIN2:nk]' />
+              <geometry column='[federated.0aea41c1u53zgo115ka0n1titk04].[clct:Geometry:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0aea41c1u53zgo115ka0n1titk04].[Latitude (generated)]</rows>
+        <cols>[federated.0aea41c1u53zgo115ka0n1titk04].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{73CDB4B6-E0D6-47EE-9E9C-C2FAAC6C54E7}' />
+    </worksheet>
+    <worksheet name='oncho_yld'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='filtered_mali_data1.csv+ (Multiple Connections)' name='federated.0aea41c1u53zgo115ka0n1titk04' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0aea41c1u53zgo115ka0n1titk04'>
+            <column caption='District Name' datatype='string' name='[ADMIN2]' role='dimension' type='nominal' />
+            <column caption='oncho_yld' datatype='real' name='[Calculation_405183275286048770]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='0.454152607461' />
+            </column>
+            <column caption='oncho_YLD' datatype='real' name='[Calculation_405183275289399304]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[population]/[Calculation_405183275286048770]' />
+            </column>
+            <column datatype='spatial' name='[Geometry]' role='measure' type='nominal' />
+            <column-instance column='[ADMIN2]' derivation='Attribute' name='[attr:ADMIN2:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Geometry]' derivation='Collect' name='[clct:Geometry:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_405183275289399304]' derivation='None' name='[none:Calculation_405183275289399304:qk]' pivot='key' type='quantitative' />
+            <column caption='Population' datatype='integer' name='[population]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='tab_base' value='true' />
+            <format attr='enabled' id='um_lcover' value='true' />
+            <format attr='enabled' id='tab_coastline' value='false' />
+            <format attr='enabled' id='pp2_line' value='false' />
+            <format attr='enabled' id='light_adm0_bnd' value='false' />
+            <format attr='enabled' id='light_adm0_lbl' value='false' />
+            <format attr='enabled' id='um_adm0_bnd' value='true' />
+            <format attr='enabled' id='um_adm0_lbl' value='true' />
+            <format attr='enabled' id='light_pp2_statebounds' value='false' />
+            <format attr='enabled' id='light_pp2_statelabels' value='false' />
+            <format attr='enabled' id='pp2_adminlabels' value='false' />
+            <format attr='enabled' id='pp2_statebounds' value='true' />
+            <format attr='enabled' id='pp2_statelabels' value='true' />
+            <format attr='enabled' id='countybounds' value='false' />
+            <format attr='enabled' id='countylabels' value='false' />
+            <format attr='enabled' id='zipbounds' value='false' />
+            <format attr='enabled' id='ziplabels' value='false' />
+            <format attr='enabled' id='tab_areabounds' value='false' />
+            <format attr='enabled' id='tab_arealabels' value='false' />
+            <format attr='enabled' id='tab_msabounds' value='false' />
+            <format attr='enabled' id='tab_msalabels' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0aea41c1u53zgo115ka0n1titk04].[none:Calculation_405183275289399304:qk]' />
+              <lod column='[federated.0aea41c1u53zgo115ka0n1titk04].[clct:Geometry:nk]' />
+              <tooltip column='[federated.0aea41c1u53zgo115ka0n1titk04].[attr:ADMIN2:nk]' />
+              <geometry column='[federated.0aea41c1u53zgo115ka0n1titk04].[clct:Geometry:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0aea41c1u53zgo115ka0n1titk04].[Latitude (generated)]</rows>
+        <cols>[federated.0aea41c1u53zgo115ka0n1titk04].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{50A8C1C5-7D1B-49C7-9337-927060377DCE}' />
+    </worksheet>
+    <worksheet name='pzq/yld'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Schistosomiasis: PZQ Procured vs. YLD</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='filtered_mali_data1.csv+ (Multiple Connections)' name='federated.0aea41c1u53zgo115ka0n1titk04' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0aea41c1u53zgo115ka0n1titk04'>
+            <column caption='sch_yld' datatype='real' name='[Calculation_405183275285979137]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='41.2194503323' />
+            </column>
+            <column caption='pzq_ratio' datatype='real' name='[Calculation_405183275286786053]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[pzq_total_procured]/[pzq_total_treatment]' />
+            </column>
+            <column caption='sch_YLD' datatype='real' name='[Calculation_405183275289333767]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[population]/[Calculation_405183275285979137]' />
+            </column>
+            <column caption='pzq/yld' datatype='real' name='[Calculation_405183275295129610]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Calculation_405183275286786053]/[Calculation_405183275289333767]' />
+            </column>
+            <column datatype='spatial' name='[Geometry]' role='measure' type='nominal' />
+            <column-instance column='[Calculation_405183275286786053]' derivation='Attribute' name='[attr:Calculation_405183275286786053:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_405183275295129610]' derivation='Avg' name='[avg:Calculation_405183275295129610:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Geometry]' derivation='Collect' name='[clct:Geometry:nk]' pivot='key' type='nominal' />
+            <column-instance column='[state_names]' derivation='None' name='[none:state_names:nk]' pivot='key' type='nominal' />
+            <column caption='Population' datatype='integer' name='[population]' role='measure' type='quantitative' />
+            <column caption='Pzq Total Procured' datatype='real' name='[pzq_total_procured]' role='measure' type='quantitative' />
+            <column caption='Pzq Total Treatment' datatype='real' name='[pzq_total_treatment]' role='measure' type='quantitative' />
+            <column caption='State Names' datatype='string' name='[state_names]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='tab_base' value='true' />
+            <format attr='enabled' id='um_lcover' value='true' />
+            <format attr='enabled' id='tab_coastline' value='false' />
+            <format attr='enabled' id='pp2_line' value='false' />
+            <format attr='enabled' id='light_adm0_bnd' value='false' />
+            <format attr='enabled' id='light_adm0_lbl' value='false' />
+            <format attr='enabled' id='um_adm0_bnd' value='true' />
+            <format attr='enabled' id='um_adm0_lbl' value='true' />
+            <format attr='enabled' id='light_pp2_statebounds' value='false' />
+            <format attr='enabled' id='light_pp2_statelabels' value='false' />
+            <format attr='enabled' id='pp2_adminlabels' value='false' />
+            <format attr='enabled' id='pp2_statebounds' value='true' />
+            <format attr='enabled' id='pp2_statelabels' value='true' />
+            <format attr='enabled' id='countybounds' value='false' />
+            <format attr='enabled' id='countylabels' value='false' />
+            <format attr='enabled' id='zipbounds' value='false' />
+            <format attr='enabled' id='ziplabels' value='false' />
+            <format attr='enabled' id='tab_areabounds' value='false' />
+            <format attr='enabled' id='tab_arealabels' value='false' />
+            <format attr='enabled' id='tab_msabounds' value='false' />
+            <format attr='enabled' id='tab_msalabels' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0aea41c1u53zgo115ka0n1titk04].[avg:Calculation_405183275295129610:qk]' />
+              <size column='[federated.0aea41c1u53zgo115ka0n1titk04].[none:state_names:nk]' />
+              <lod column='[federated.0aea41c1u53zgo115ka0n1titk04].[clct:Geometry:nk]' />
+              <tooltip column='[federated.0aea41c1u53zgo115ka0n1titk04].[attr:Calculation_405183275286786053:qk]' />
+              <geometry column='[federated.0aea41c1u53zgo115ka0n1titk04].[clct:Geometry:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0aea41c1u53zgo115ka0n1titk04].[Latitude (generated)]</rows>
+        <cols>[federated.0aea41c1u53zgo115ka0n1titk04].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{98B784F7-2472-41D0-927C-84456CCB5440}' />
+    </worksheet>
+    <worksheet name='pzq_ratio'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='filtered_mali_data1.csv+ (Multiple Connections)' name='federated.0aea41c1u53zgo115ka0n1titk04' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0aea41c1u53zgo115ka0n1titk04'>
+            <column caption='District Name' datatype='string' name='[ADMIN2]' role='dimension' type='nominal' />
+            <column caption='pzq_ratio' datatype='real' name='[Calculation_405183275286786053]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[pzq_total_procured]/[pzq_total_treatment]' />
+            </column>
+            <column datatype='spatial' name='[Geometry]' role='measure' type='nominal' />
+            <column-instance column='[ADMIN2]' derivation='Attribute' name='[attr:ADMIN2:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Geometry]' derivation='Collect' name='[clct:Geometry:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_405183275286786053]' derivation='None' name='[none:Calculation_405183275286786053:qk]' pivot='key' type='quantitative' />
+            <column caption='Pzq Total Procured' datatype='real' name='[pzq_total_procured]' role='measure' type='quantitative' />
+            <column caption='Pzq Total Treatment' datatype='real' name='[pzq_total_treatment]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='tab_base' value='true' />
+            <format attr='enabled' id='um_lcover' value='true' />
+            <format attr='enabled' id='tab_coastline' value='false' />
+            <format attr='enabled' id='pp2_line' value='false' />
+            <format attr='enabled' id='light_adm0_bnd' value='false' />
+            <format attr='enabled' id='light_adm0_lbl' value='false' />
+            <format attr='enabled' id='um_adm0_bnd' value='true' />
+            <format attr='enabled' id='um_adm0_lbl' value='true' />
+            <format attr='enabled' id='light_pp2_statebounds' value='false' />
+            <format attr='enabled' id='light_pp2_statelabels' value='false' />
+            <format attr='enabled' id='pp2_adminlabels' value='false' />
+            <format attr='enabled' id='pp2_statebounds' value='true' />
+            <format attr='enabled' id='pp2_statelabels' value='true' />
+            <format attr='enabled' id='countybounds' value='false' />
+            <format attr='enabled' id='countylabels' value='false' />
+            <format attr='enabled' id='zipbounds' value='false' />
+            <format attr='enabled' id='ziplabels' value='false' />
+            <format attr='enabled' id='tab_areabounds' value='false' />
+            <format attr='enabled' id='tab_arealabels' value='false' />
+            <format attr='enabled' id='tab_msabounds' value='false' />
+            <format attr='enabled' id='tab_msalabels' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0aea41c1u53zgo115ka0n1titk04].[none:Calculation_405183275286786053:qk]' />
+              <lod column='[federated.0aea41c1u53zgo115ka0n1titk04].[clct:Geometry:nk]' />
+              <tooltip column='[federated.0aea41c1u53zgo115ka0n1titk04].[attr:ADMIN2:nk]' />
+              <geometry column='[federated.0aea41c1u53zgo115ka0n1titk04].[clct:Geometry:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0aea41c1u53zgo115ka0n1titk04].[Latitude (generated)]</rows>
+        <cols>[federated.0aea41c1u53zgo115ka0n1titk04].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{B81A30F3-80C1-418C-83FB-401972BA319E}' />
+    </worksheet>
+    <worksheet name='sch_yld'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='filtered_mali_data1.csv+ (Multiple Connections)' name='federated.0aea41c1u53zgo115ka0n1titk04' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0aea41c1u53zgo115ka0n1titk04'>
+            <column caption='sch_yld' datatype='real' name='[Calculation_405183275285979137]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='41.2194503323' />
+            </column>
+            <column caption='sch_YLD' datatype='real' name='[Calculation_405183275289333767]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[population]/[Calculation_405183275285979137]' />
+            </column>
+            <column datatype='spatial' name='[Geometry]' role='measure' type='nominal' />
+            <column-instance column='[state_names]' derivation='Attribute' name='[attr:state_names:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Geometry]' derivation='Collect' name='[clct:Geometry:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_405183275289333767]' derivation='None' name='[none:Calculation_405183275289333767:qk]' pivot='key' type='quantitative' />
+            <column caption='Population' datatype='integer' name='[population]' role='measure' type='quantitative' />
+            <column caption='State Names' datatype='string' name='[state_names]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='tab_base' value='true' />
+            <format attr='enabled' id='um_lcover' value='true' />
+            <format attr='enabled' id='tab_coastline' value='false' />
+            <format attr='enabled' id='pp2_line' value='false' />
+            <format attr='enabled' id='light_adm0_bnd' value='false' />
+            <format attr='enabled' id='light_adm0_lbl' value='false' />
+            <format attr='enabled' id='um_adm0_bnd' value='true' />
+            <format attr='enabled' id='um_adm0_lbl' value='true' />
+            <format attr='enabled' id='light_pp2_statebounds' value='false' />
+            <format attr='enabled' id='light_pp2_statelabels' value='false' />
+            <format attr='enabled' id='pp2_adminlabels' value='false' />
+            <format attr='enabled' id='pp2_statebounds' value='true' />
+            <format attr='enabled' id='pp2_statelabels' value='true' />
+            <format attr='enabled' id='countybounds' value='false' />
+            <format attr='enabled' id='countylabels' value='false' />
+            <format attr='enabled' id='zipbounds' value='false' />
+            <format attr='enabled' id='ziplabels' value='false' />
+            <format attr='enabled' id='tab_areabounds' value='false' />
+            <format attr='enabled' id='tab_arealabels' value='false' />
+            <format attr='enabled' id='tab_msabounds' value='false' />
+            <format attr='enabled' id='tab_msalabels' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0aea41c1u53zgo115ka0n1titk04].[none:Calculation_405183275289333767:qk]' />
+              <lod column='[federated.0aea41c1u53zgo115ka0n1titk04].[clct:Geometry:nk]' />
+              <tooltip column='[federated.0aea41c1u53zgo115ka0n1titk04].[attr:state_names:nk]' />
+              <geometry column='[federated.0aea41c1u53zgo115ka0n1titk04].[clct:Geometry:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0aea41c1u53zgo115ka0n1titk04].[Latitude (generated)]</rows>
+        <cols>[federated.0aea41c1u53zgo115ka0n1titk04].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{683A5C1C-4EA8-4B0F-B537-E6205569DD92}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='ivm_ratio'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0aea41c1u53zgo115ka0n1titk04].[none:Calculation_405183275286450179:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{2F343229-4FD6-476D-9D5A-5367539DD47D}' />
+    </window>
+    <window class='worksheet' name='pzq_ratio'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0aea41c1u53zgo115ka0n1titk04].[none:Calculation_405183275286786053:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{0B5593C6-4CAE-4DA3-8F01-60FCB8289F1E}' />
+    </window>
+    <window class='worksheet' name='alb_ratio'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0aea41c1u53zgo115ka0n1titk04].[none:Calculation_405183275286626308:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{548C0A20-8E07-40F3-AE94-5D26A7E51B23}' />
+    </window>
+    <window class='worksheet' name='lf_yld'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0aea41c1u53zgo115ka0n1titk04].[none:Calculation_405183275289088006:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C5A9500E-B8E7-49AB-AEF6-617830958B95}' />
+    </window>
+    <window class='worksheet' name='sch_yld'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0aea41c1u53zgo115ka0n1titk04].[none:Calculation_405183275289333767:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{280E753E-A360-42D9-83F8-1613B2471CA6}' />
+    </window>
+    <window class='worksheet' name='oncho_yld'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0aea41c1u53zgo115ka0n1titk04].[none:Calculation_405183275289399304:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{48E5093C-37A2-4DE6-8BF0-AEA6689C1B41}' />
+    </window>
+    <window class='worksheet' name='ivm/yld'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0aea41c1u53zgo115ka0n1titk04].[none:Calculation_405183275291652105:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2018BC8E-C16C-4E09-8A03-F6D9D012B863}' />
+    </window>
+    <window class='worksheet' maximized='true' name='pzq/yld'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0aea41c1u53zgo115ka0n1titk04].[avg:Calculation_405183275295129610:qk]' type='color' />
+            <card pane-specification-id='0' param='[federated.0aea41c1u53zgo115ka0n1titk04].[none:state_names:nk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{0AC82951-48B5-4C08-B561-D93816375298}' />
+    </window>
+  </windows>
+</workbook>

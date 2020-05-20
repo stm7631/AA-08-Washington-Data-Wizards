@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+	<link href="https://fonts.googleapis.com/css?family=Merriweather|Noto+Sans&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+        rel="stylesheet"
+        href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+    />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="map.css" />
+    <link rel="stylesheet" type="text/css" href="doc.css" />
+    
+	<noscript>This website requires JavaScript!</noscript>
+	<title>ESPEN Novel Applications</title>
+</head>
+
+<body>
+	<div id="info-box"></div>
+	<div id="map-header" class="jumbotron jumbotron-fluid hero">
+		<nav class="navbar navbar-expand-lg navbar-light">
+			<a class="navbar-brand" href="index.html">
+				<p class="h3"><b>ESPEN Applications</b></p>
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="index.html">
+							<p class="h5">Home</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="map.html">
+							<p class="h5"><b>Solution</b></p><span class="sr-only">(current)</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+    </div>
+    <body data-spy="scroll" data-target="#toc">
+        <div class="container">
+          <div class="row">
+            <!-- sidebar, which will move to the top on a small screen -->
+            <div class="col-sm-3">
+              <nav id="toc" data-toggle="toc" class="sticky-top"></nav>
+            </div>
+            <!-- main content area -->
+            <div class="col-sm-9">
+                <h2>Neglected Tropical Diseases</h2>
+                    <p>Neglected tropical diseases (NTDs) – a diverse group of communicable diseases that prevail in tropical and subtropical conditions in 149 countries – affect more than one billion people and cost developing economies billions of dollars every year. Populations living in poverty, without adequate sanitation and in close contact with infectious vectors and domestic animals and livestock are those worst affected.</p>
+                    <h3>Diseases</h3>
+                    <h4>Lymphatic filariasis</h4>
+                        <p>Lymphatic filariasis (LF) - Commonly known as elephantiasis, is a painful and profoundly disfiguring disease. It is caused by infection with parasites classified as nematodes (roundworms) of the family Filariodidea that are transmitted through the bites of infected mosquitos. Mosquito-transmitted larvae are deposited on the skin from where they can enter the body. The larvae then migrate to the lymphatic vessels where they develop into adult worms, thus continuing a cycle of transmission.</p>
+                        <p>All ages are affected where filariasis is transmitted. In endemic countries, lymphatic filariasis has a major social and economic impact. Lymphatic filariasis affects over 120 million people in 72 countries throughout the tropics and sub-tropics of Asia, Africa, the Western Pacific, and parts of the Caribbean and South America.</p>
+                    <h4>Schistosomiasis</h4>
+                        <p>Schistosomiasis - a disease of poverty that leads to chronic ill-health. Infection is acquired when people come into contact with fresh water infested with the larval forms (cercariae) of parasitic blood flukes, known as schistosomes. The microscopic adult worms live in the veins draining the urinary tract and intestines. Most of the eggs they lay are trapped in the tissues and the body’s reaction to them can cause massive damage.</p>
+                        <p>Schistosomiasis affects almost 240 million people worldwide, and more than 700 million people live in endemic areas. The infection is prevalent in tropical and sub-tropical areas, in poor communities without potable water and adequate sanitation. </p>
+                    <h4>Onchocerciasis</h4>
+                        <p>Onchocerciasis, also known as river blindness, is a disease caused by infection with the parasitic worm Onchocerca volvulus. Filarial worms (O. volvulus) are transmitted from person to person by the repeated bites of infected black flies (Simulium spp.) . These black flies breed in fast-flowing rivers and streams, mostly in remote villages located near fertile land where people rely on agriculture.</p>
+                    <h3>Treatment</h3>
+
+                <h2>Methodology</h2>
+                <p>In our first iteration (Amount of Drug Procured compared to the number of people requiring treatment for a Disease), we used two data points in each of the drug sheets in the JRSM. These were Drugs Procured and the People Requiring Treatment. This was to get baseline information - see how many drugs were being procured in an area in comparison to how many people they expected to be treated. We standardized this ratio in an effort to easily see whether an area was procuring more drugs per person requiring treatment. The standardization process is stated in the Formulas section. There was one problem with this approach though, and that is that we had no way to tell if the People Requiring Treatment data was accurate or not - no way to verify it. The maps generated from this </p>
+                <p>With our second iteration (Amount of Drug Procured Compared to the Number of People Treated for a Disease (MDA)), we tried to quantify, to the best of our ability, whether the number of drugs procured was actually necessary. We did this by looking at the MDA data for diseases (from 2017), also from the ESPEN Portal. The 2017 data are the latest values we have, and once the newer data is available, the results will be better. The MDA data is more reliable because it gives us the number of people who were actually treated for a specific disease. While each disease may have multiple drugs that could treat it (for example Ivermectin can be used to treat both Lymphatic Filariasis and Onchocerciasis), the number of people treated gives us a better estimate as to how many people were actually treated in the area. With this new data we compared the ratio of the number of drugs being procured per state for a disease and the number of people that were treated with MDA in that state for that disease is between states. </p>
+                <p>The result of the drug comparison is a ratio (Drug Procurement vs Treated) of how many drugs were procured compared to the number of people treated in MDA. Once we finish this calculation we standardize it (Standardized Drug Procurement vs Treated). By standardizing it, we are able to see how a country’s ratio compares to the average based on the standard deviation. If the standardized value is positive, then that means they are procuring more drugs per person treated on average. If it is negative, then that means they are procuring less drugs per person treated on average. In addition to these statistics, you can see whether the higher or lower than average value is expected or not by looking at the MDA coverage percentage. Our thinking is that if the coverage is low but the standardized value is high, then that means they are procuring drugs but are not able to distribute them properly. If the coverage is high and the standardized value is high, then they are probably procuring more drugs than is necessary. This can be seen in the table below.</p>
+                <p>This can be seen by looking at the MDA coverage value in the tool tip. We try to show the problem areas by highlighting the high and low standardized values as dark areas compared to the rest of the map. Hovering over the area with the mouse will bring up a tooltip that shows the exact ratio. In an ideal scenario, the whole map would be a similar color. Another place to look at this data is the Standardized Procurement Ratio vs MDA Coverage scatter plot in the dashboard. This will allow you to easily see the problem states as the outliers.</p>
+                <h2>Data Sources</h2>
+                <h2>Formulas</h2>
+                <p>Drug Ratio: The sum of all the drugs procured in each area divided by the sum of all the people requiring treatment in each area, as shown in the JRSM. </p>
+                <p>Standardized Drug Procurement vs Treated: The number of drugs procured in each area (from JRSM) divided by the number of people treated in the area (from IU Data). This value is then standardized.                </p>
+                <p>Drug Procurement vs Treated: The number of drugs procured in each area (from JRSM) divided by the number of people treated in the area (from IU Data).</p>
+                <p>Disease MDA Coverage: The number of people treated for a disease (from IU Data) divided by the total number of people who require treatment (from IU Data)
+                </p>
+                <h2>Visualizations</h2>
+            </div>
+          </div>
+        </div>
+      </body>
+
+    <!-- <div id="body">
+        <div id="left" class="column">
+            <div class="bottom">
+                <nav id="toc" data-toggle="toc"></nav>
+                <body data-spy="scroll" data-target="#toc"></body>
+            </div>
+            
+        </div>
+        <div id="right" class="column">
+            <div class="bottom">
+                
+                <h1>The title</h1>
+
+            </div>
+        </div>
+    </div> -->
+	
+
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</body>
+
+</html>
