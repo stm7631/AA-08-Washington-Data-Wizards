@@ -21,7 +21,7 @@
 <!-- Keep this script here for reloading purposes -->
 <script>
     window.onbeforeunload = function () {
-        window.scrollTo(0,0)
+        window.scrollTo(0, 0)
     }
 </script>
 
@@ -38,15 +38,15 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-						<a class="nav-link" href="../index.html">
-							<h5>Home</h5>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="../map.html">
-							<h5><b>Solution</b></h5><span class="sr-only">(current)</span>
-						</a>
-					</li>
+                        <a class="nav-link" href="../index.html">
+                            <h5>Home</h5>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../map.html">
+                            <h5><b>Solution</b></h5><span class="sr-only">(current)</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -70,91 +70,103 @@
                 <h4 class="mt-3"><b>Executive Summary</b></h4>
                 <!-- ONCHO -->
                 <p id="onchoSummary">
-                    <b>Ogun</b> - A lot of drugs per person treated, but a low MDA coverage percentage. Need to distribute drugs better.
+                    <b>Ogun</b> - A lot of drugs per person treated, but a low MDA coverage percentage. Need to
+                    distribute drugs better.
                 </p>
-                
+
                 <!-- SCHISTO -->
                 <p id="schistoSummary" class="hidden">
                     <b>Taraba</b> - Low drug procurement rate and low coverage. They need to procure more drugs.<br><br>
-                    <b>Federal Capital Territory</b> - Procuring many drugs but maintaining a low coverage rate. They need to improve distribution. <br><br>
-                    <b>Osun</b> - They are procuring more drugs than average compared to the people treated in MDA, but they have low MDA coverage. They need to improve distribution.
+                    <b>Federal Capital Territory</b> - Procuring many drugs but maintaining a low coverage rate. They
+                    need to improve distribution. <br><br>
+                    <b>Osun</b> - They are procuring more drugs than average compared to the people treated in MDA, but
+                    they have low MDA coverage. They need to improve distribution.
                 </p>
 
                 <!-- LF -->
                 <p id="lfSummary" class="hidden">
-                    <b>Ogun</b> - A lot of drugs per person treated, but a low MDA coverage percentage. Need to distribute drugs better.<br><br>
-                    <b>Oyo</b> - A lot of drugs per person treated, but a low MDA coverage percentage. Need to distribute drugs better.
+                    <b>Ogun</b> - A lot of drugs per person treated, but a low MDA coverage percentage. Need to
+                    distribute drugs better.<br><br>
+                    <b>Oyo</b> - A lot of drugs per person treated, but a low MDA coverage percentage. Need to
+                    distribute drugs better.
                 <h4 class="mt-3"><b>Definitions</b></h4>
                 <div id="accordion" class="flex-fill">
                     <div class="card">
-                      <div class="card-header" id="headingOne">
-                        <h5 class="mb-0">
-                          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Disease Vocabulary
-                          </button>
-                        </h5>
-                      </div>
-                  
-                      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                        <div id="vocab" class="card-body">
-                            <p>
-                                <b>Onchocerciasis</b> (Oncho) <br>
-                                <b>Schistosomiasis</b>  (Schisto) <br>
-                                <b>Lymphatic Filariasis</b> (LF)
-                            </p>
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                    aria-expanded="true" aria-controls="collapseOne">
+                                    Disease Vocabulary
+                                </button>
+                            </h5>
                         </div>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card-header" id="headingTwo">
-                        <h5 class="mb-0">
-                          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Drug Vocabulary
-                          </button>
-                        </h5>
-                      </div>
-                      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                        <div id="vocab" class="card-body">
-                            <p>
-                                <b>Albendazole</b> (ALB) <br>
-                                <b>Ivermectin</b> (IVM) <br>
-                                <b>Praziquantel</b> (PZQ)
-                            </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card-header" id="headingThree">
-                        <h5 class="mb-0">
-                          <button id="dataInfo" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Data Information (Oncho)
-                          </button>
-                        </h5>
-                      </div>
-                      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                        <div id="vocab" class="card-body">
-                            <!-- ONCHO -->
-                            <span id="onchoData">
-                                <b>No MDA Data For:</b><br>
-                                Lagos, Nasarawa, Plateau, Rivers</span>
-                            
-                            <!-- SCHISTO -->
-                            <span id="schistoData" class="hidden">
-                                <b>No MDA Data For:</b><br>
-                                Abia, Adamawa, Bauchi, Borno, Gombe, Imo, Lagos, Oyo, Rivers, Yobe, Zamfara
-                            </span>
 
-                            <!-- LF -->
-                            <span id="lfData" class="hidden">
-                                <b>No MDA Data For:</b><br>
-                                Borno, Lagos, Nasarawa, Plateau, Rivers<br><br>
-                                For LF, the drug procurement data we have is from two drugs, ALB and IVM. While IVM shows up twice, the data in the JRSM is split to show how much IVM is procured for Oncho, and how much is for LF.<br><br>
-                                Notice there is no <b>Procurement / Population Requiring Treatment</b> map. The ALB procured for LF has missing data in the required treatment field.
-                            </span>
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div id="vocab" class="card-body">
+                                <p>
+                                    <b>Onchocerciasis</b> (Oncho) <br>
+                                    <b>Schistosomiasis</b> (Schisto) <br>
+                                    <b>Lymphatic Filariasis</b> (LF)
+                                </p>
+                            </div>
                         </div>
-                      </div>
                     </div>
-                  </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                    aria-expanded="false" aria-controls="collapseTwo">
+                                    Drug Vocabulary
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div id="vocab" class="card-body">
+                                <p>
+                                    <b>Albendazole</b> (ALB) <br>
+                                    <b>Ivermectin</b> (IVM) <br>
+                                    <b>Praziquantel</b> (PZQ)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h5 class="mb-0">
+                                <button id="dataInfo" class="btn btn-link collapsed" data-toggle="collapse"
+                                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Data Information (Oncho)
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                            data-parent="#accordion">
+                            <div id="vocab" class="card-body">
+                                <!-- ONCHO -->
+                                <span id="onchoData">
+                                    <b>No MDA Data For:</b><br>
+                                    Lagos, Nasarawa, Plateau, Rivers</span>
+
+                                <!-- SCHISTO -->
+                                <span id="schistoData" class="hidden">
+                                    <b>No MDA Data For:</b><br>
+                                    Abia, Adamawa, Bauchi, Borno, Gombe, Imo, Lagos, Oyo, Rivers, Yobe, Zamfara
+                                </span>
+
+                                <!-- LF -->
+                                <span id="lfData" class="hidden">
+                                    <b>No MDA Data For:</b><br>
+                                    Borno, Lagos, Nasarawa, Plateau, Rivers<br><br>
+                                    For LF, the drug procurement data we have is from two drugs, ALB and IVM. While IVM
+                                    shows up twice, the data in the JRSM is split to show how much IVM is procured for
+                                    Oncho, and how much is for LF.<br><br>
+                                    Notice there is no <b>Procurement / Population Requiring Treatment</b> map. The ALB
+                                    procured for LF has missing data in the required treatment field.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <section id="solution" class="flex-fill">
@@ -164,30 +176,29 @@
                     <noscript>
                         <a href='#'>
                             <img alt=' '
-                                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ni&#47;NigeriaNTDDrugVizzes_15894844830130&#47;OnchoDashboard&#47;1_rss.png'
+                                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ni&#47;NigeriaNTDDrugVizualizations&#47;OnchoDashboard&#47;1_rss.png'
                                 style='border: none' />
                         </a>
                     </noscript>
                     <object class='tableauViz' style='display:none;'>
                         <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
                         <param name='embed_code_version' value='3' />
-                        <param name='path'
-                            value='views&#47;NigeriaNTDDrugVizzes_15894844830130&#47;OnchoDashboard?:embed=y&amp;:display_count=y' />
+                        <param name='site_root' value='' />
+                        <param name='name' value='NigeriaNTDDrugVizualizations&#47;OnchoDashboard' />
+                        <param name='tabs' value='no' />
                         <param name='toolbar' value='yes' />
                         <param name='static_image'
-                            value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ni&#47;NigeriaNTDDrugVizzes_15894844830130&#47;OnchoDashboard&#47;1.png' />
+                            value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ni&#47;NigeriaNTDDrugVizualizations&#47;OnchoDashboard&#47;1.png' />
                         <param name='animate_transition' value='yes' />
                         <param name='display_static_image' value='yes' />
                         <param name='display_spinner' value='yes' />
                         <param name='display_overlay' value='yes' />
                         <param name='display_count' value='yes' />
-                        <!-- <param name='device' value='desktop' /> -->
                     </object>
                 </div>
                 <script type='text/javascript'>
                     var divElement = document.getElementById('onchoViz');
                     var vizElement = divElement.getElementsByTagName('object')[0];
-
                     if (divElement.offsetWidth > 800) {
                         vizElement.style.width = '1000px';
                         vizElement.style.height = '1427px';
@@ -198,10 +209,9 @@
                         vizElement.style.width = '100%';
                         vizElement.style.height = '1977px';
                     }
-
                     var scriptElement = document.createElement('script');
                     scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
                 </script>
 
                 <!-- SCHISTO -->
@@ -209,30 +219,29 @@
                     <noscript>
                         <a href='#'>
                             <img alt=' '
-                                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ni&#47;NigeriaNTDDrugVizzes_15894844830130&#47;SchistoDashboard&#47;1_rss.png'
+                                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ni&#47;NigeriaNTDDrugVizualizations&#47;SchistoDashboard&#47;1_rss.png'
                                 style='border: none' />
                         </a>
                     </noscript>
                     <object class='tableauViz' style='display:none;'>
                         <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
                         <param name='embed_code_version' value='3' />
-                        <param name='path'
-                            value='views&#47;NigeriaNTDDrugVizzes_15894844830130&#47;SchistoDashboard?:embed=y&amp;:display_count=y' />
+                        <param name='site_root' value='' />
+                        <param name='name' value='NigeriaNTDDrugVizualizations&#47;SchistoDashboard' />
+                        <param name='tabs' value='no' />
                         <param name='toolbar' value='yes' />
                         <param name='static_image'
-                            value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ni&#47;NigeriaNTDDrugVizzes_15894844830130&#47;SchistoDashboard&#47;1.png' />
+                            value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ni&#47;NigeriaNTDDrugVizualizations&#47;SchistoDashboard&#47;1.png' />
                         <param name='animate_transition' value='yes' />
                         <param name='display_static_image' value='yes' />
                         <param name='display_spinner' value='yes' />
                         <param name='display_overlay' value='yes' />
                         <param name='display_count' value='yes' />
-                        <!-- <param name='device' value='desktop' /> -->
                     </object>
                 </div>
                 <script type='text/javascript'>
                     var divElement = document.getElementById('schistoViz');
                     var vizElement = divElement.getElementsByTagName('object')[0];
-
                     if (divElement.offsetWidth > 800) {
                         vizElement.style.width = '1000px';
                         vizElement.style.height = '1427px';
@@ -243,7 +252,6 @@
                         vizElement.style.width = '100%';
                         vizElement.style.height = '1927px';
                     }
-
                     var scriptElement = document.createElement('script');
                     scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
                     vizElement.parentNode.insertBefore(scriptElement, vizElement);                
@@ -254,7 +262,7 @@
                     <noscript>
                         <a href='#'>
                             <img alt=' '
-                                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ni&#47;NigeriaNTDDrugVizzes_15894844830130&#47;LFDashboard&#47;1_rss.png'
+                                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ni&#47;NigeriaNTDDrugVizualizations&#47;LFDashboard&#47;1_rss.png'
                                 style='border: none' />
                         </a>
                     </noscript>
@@ -262,23 +270,21 @@
                         <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
                         <param name='embed_code_version' value='3' />
                         <param name='site_root' value='' />
-                        <param name='name' value='NigeriaNTDDrugVizzes_15894844830130&#47;LFDashboard' />
+                        <param name='name' value='NigeriaNTDDrugVizualizations&#47;LFDashboard' />
                         <param name='tabs' value='no' />
                         <param name='toolbar' value='yes' />
                         <param name='static_image'
-                            value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ni&#47;NigeriaNTDDrugVizzes_15894844830130&#47;LFDashboard&#47;1.png' />
+                            value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ni&#47;NigeriaNTDDrugVizualizations&#47;LFDashboard&#47;1.png' />
                         <param name='animate_transition' value='yes' />
                         <param name='display_static_image' value='yes' />
                         <param name='display_spinner' value='yes' />
                         <param name='display_overlay' value='yes' />
                         <param name='display_count' value='yes' />
-                        <!-- <param name='device' value='desktop' /> -->
                     </object>
                 </div>
                 <script type='text/javascript'>
                     var divElement = document.getElementById('lfViz');
                     var vizElement = divElement.getElementsByTagName('object')[0];
-
                     if (divElement.offsetWidth > 800) {
                         vizElement.style.width = '1000px';
                         vizElement.style.height = '827px';
@@ -289,10 +295,9 @@
                         vizElement.style.width = '100%';
                         vizElement.style.height = '1227px';
                     }
-
                     var scriptElement = document.createElement('script');
                     scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                    vizElement.parentNode.insertBefore(scriptElement, vizElement);             
+                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
                 </script>
             </div>
         </section>
