@@ -19,6 +19,8 @@
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 	<link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" type="text/css" href="map.css" />
     <link rel="stylesheet" type="text/css" href="doc.css" />
@@ -80,20 +82,221 @@
                     <h4>Onchocerciasis</h4>
                         <p>Onchocerciasis, also known as river blindness, is a disease caused by infection with the parasitic worm Onchocerca volvulus. Filarial worms (O. volvulus) are transmitted from person to person by the repeated bites of infected black flies (Simulium spp.) . These black flies breed in fast-flowing rivers and streams, mostly in remote villages located near fertile land where people rely on agriculture.</p>
                     <h3>Treatment</h3>
+                        <p>NTDs are targeted by the World Health Organization (WHO) through mass drug administration (MDA) programs. MDA is a strategy used to administer NTD medicines to the entire at-risk population of an area, most commonly a district. This strategy takes different forms in different countries, but usually consists of a campaign-style approach to deliver medications to all eligible people in at-risk communities, usually once or twice per year depending on the specific, targeted NTDs. </p>
 
                 <h2>Methodology</h2>
-                <p>In our first iteration (Amount of Drug Procured compared to the number of people requiring treatment for a Disease), we used two data points in each of the drug sheets in the JRSM. These were Drugs Procured and the People Requiring Treatment. This was to get baseline information - see how many drugs were being procured in an area in comparison to how many people they expected to be treated. We standardized this ratio in an effort to easily see whether an area was procuring more drugs per person requiring treatment. The standardization process is stated in the Formulas section. There was one problem with this approach though, and that is that we had no way to tell if the People Requiring Treatment data was accurate or not - no way to verify it. The maps generated from this </p>
-                <p>With our second iteration (Amount of Drug Procured Compared to the Number of People Treated for a Disease (MDA)), we tried to quantify, to the best of our ability, whether the number of drugs procured was actually necessary. We did this by looking at the MDA data for diseases (from 2017), also from the ESPEN Portal. The 2017 data are the latest values we have, and once the newer data is available, the results will be better. The MDA data is more reliable because it gives us the number of people who were actually treated for a specific disease. While each disease may have multiple drugs that could treat it (for example Ivermectin can be used to treat both Lymphatic Filariasis and Onchocerciasis), the number of people treated gives us a better estimate as to how many people were actually treated in the area. With this new data we compared the ratio of the number of drugs being procured per state for a disease and the number of people that were treated with MDA in that state for that disease is between states. </p>
-                <p>The result of the drug comparison is a ratio (Drug Procurement vs Treated) of how many drugs were procured compared to the number of people treated in MDA. Once we finish this calculation we standardize it (Standardized Drug Procurement vs Treated). By standardizing it, we are able to see how a country’s ratio compares to the average based on the standard deviation. If the standardized value is positive, then that means they are procuring more drugs per person treated on average. If it is negative, then that means they are procuring less drugs per person treated on average. In addition to these statistics, you can see whether the higher or lower than average value is expected or not by looking at the MDA coverage percentage. Our thinking is that if the coverage is low but the standardized value is high, then that means they are procuring drugs but are not able to distribute them properly. If the coverage is high and the standardized value is high, then they are probably procuring more drugs than is necessary. This can be seen in the table below.</p>
-                <p>This can be seen by looking at the MDA coverage value in the tool tip. We try to show the problem areas by highlighting the high and low standardized values as dark areas compared to the rest of the map. Hovering over the area with the mouse will bring up a tooltip that shows the exact ratio. In an ideal scenario, the whole map would be a similar color. Another place to look at this data is the Standardized Procurement Ratio vs MDA Coverage scatter plot in the dashboard. This will allow you to easily see the problem states as the outliers.</p>
+                    <h3>Establishing Baseline</h3>
+                        <p>In the first iteration (Amount of Drug Procured compared to the number of people requiring treatment for a Disease), two data points were used in each of the drug sheets in the JRSM. These were Drugs Procured and the People Requiring Treatment. These values were used to obtain baseline information - see how many drugs were being procured in an area in comparison to how many people they expected to be treated. This ratio was standardized in an effort to easily see whether an area was procuring more drugs per person requiring treatment. The standardization process is stated in the Formulas section. There was one problem with this approach though, and that is verifying the accuracy of the People Requiring Treatment data. Ultimately, the accuracy of these values was left to the the strength of each country's data collection.</p>
+                    <h3>Synthesizing Datasets </h3>
+                        <p>In the second iteration (Amount of Drug Procured Compared to the Number of People Treated for a Disease (MDA)), we tried to quantify, to the best of our ability, whether the number of drugs procured was actually necessary. This was accomplished by looking at the MDA data for diseases (from 2017) and also from the ESPEN Portal. The 2017 data are the latest values available, and once the newer data is available, the results will more accurately reflect recent developments. The MDA data is more reliable because it provides the number of people who were actually treated for a specific disease. While each disease may have multiple drugs that could treat it (for example Ivermectin can be used to treat both Lymphatic Filariasis and Onchocerciasis), the number of people treated gives a better estimate as to population treated. With this new data, comparisons to the ratio of the number of drugs being procured per state for a disease and the number of people that were treated with MDA in that state for that disease is between states were made. </p>
+                    <h3>Standardization</h3>
+                        <p>The result of the drug comparison is a ratio (Drug Procurement vs Treated) of how many drugs were procured compared to the number of people treated in MDA. Once this calculation was completed, it was then standardized (Standardized Drug Procurement vs Treated). By standardizing it, we are able to see how a country’s ratio compares to the average based on the standard deviation. If the standardized value is positive, then that means they are procuring more drugs per person treated on average. If it is negative, then that means they are procuring less drugs per person treated on average. </p>
+                    <h3>Analysis</h3>
+                        <p>Determing if higher or lower than average values are expected can be accomplished by looking at the MDA coverage percentage. If the coverage is low but the standardized value is high, then that means they are procuring drugs but are not able to distribute them properly. If the coverage is high and the standardized value is high, then they are probably procuring more drugs than is necessary. This can be seen in the table below.</p>
+                        <table style="width:100%">
+                            <tr>
+                              <th></th>
+                              <th>Below average Drug Ratio (DR)</th>
+                              <th>Above average Drug Ratio (DR)</th>
+                            </tr>
+                            <tr>
+                              <td>Low MDA Coverage</td>
+                              <td>Insufficient procurement</td>
+                              <td>Problematic distribution</td>
+                            </tr>
+                            <tr>
+                              <td>High MDA Coverage</td>
+                              <td>Satisfactory</td>
+                              <td>Excessive procurement</td>
+                            </tr>
+                          </table>
+                        <br>
+                        <p>This table can be used to draw basic analysis from the MDA coverage value in the tool tip. The problem areas are displayed by highlighting the high and low standardized values as dark areas compared to the rest of the map. Hovering over the area with the mouse will bring up a tooltip that shows the exact ratio. In an ideal scenario, the entire map would be a similar color. Another place to look at this data is the Standardized Procurement Ratio vs MDA Coverage scatter plot in the dashboard. This will allow you to easily identify the problem states as the outliers.</p>
                 <h2>Data Sources</h2>
+                    <p>JRSM - (Joint Request for Selected PC Medicines) Excel spreadsheets found in the ESPEN Portal that are filled out by countries to help them quantify how many drugs are needed. </p>
+                    <p>IU MDA Data - CSVs found in the ESPEN Portal that provide information on MDA treatment for a specific disease in a country. </p>
+                    <p>IHME GBD Data - Data obtained from the IHME GBD portal includes YLD, YLL, and DALY statistics for the diseases and countries. </p>
+                    <p>Shape Files - Either found in the Espen portal or from https://data.humdata.org/, depending on which one is more accurate. </p>
+                <h2>Medication</h2>
+                    <h3>Praziquantel</h3>
+                        <p>Praziquantel (PZQ) is a prescription drug typically used as anti-worm medication. It prevents newly hatched insect larvae (worms) from growing or multiplying in ones body. PZQ is used to treat infections caused by schistosoma worms that enter the body through skin coming in contact with contaminated water. </p>
+                    <h3>Ivermectin</h3>
+                        <p>Ivermectin (IVM) is a presecription drug used to treat infections caused by parasites, threadworms, and roundworms. IVM is used to treat both onchocerciasis and lymphatic filariasis.</p>
+                    <h3>Albendazole</h3>
+                        <p>Albendazole (ALB) is a prescription drug used for treatment of a variety of worms. Taken orally, this drug is used to treat lymphatic filariasis</p>
                 <h2>Formulas</h2>
-                <p>Drug Ratio: The sum of all the drugs procured in each area divided by the sum of all the people requiring treatment in each area, as shown in the JRSM. </p>
-                <p>Standardized Drug Procurement vs Treated: The number of drugs procured in each area (from JRSM) divided by the number of people treated in the area (from IU Data). This value is then standardized.                </p>
-                <p>Drug Procurement vs Treated: The number of drugs procured in each area (from JRSM) divided by the number of people treated in the area (from IU Data).</p>
-                <p>Disease MDA Coverage: The number of people treated for a disease (from IU Data) divided by the total number of people who require treatment (from IU Data)</p>
-                
+                    <h3>Drug Ratio</h3>
+                    <p>The sum of all the drugs procured in each area divided by the sum of all the people requiring treatment in each state, as shown in the JRSM. </p>
+                    <math display="block">
+                        <mi>DR</mi>
+                        <mo>=</mo>
+                        <mrow>
+                          <mfrac>
+                            <mrow>
+                              <mi>Sum of drugs procured</mi>
+                            </mrow>
+                            <mrow>
+                              <mi>Population requiring treatment</mi>
+                            </mrow>
+                          </mfrac>
+                        </mrow>
+                    </math>
+                    <h3>Drug Procurement vs Treated</h3>
+                    <p>The number of drugs procured in each area (from JRSM) divided by the number of people treated in the area (from IU Data).</p>
+                    <math display="block">
+                        <mi>DP</mi>
+                        <mo>=</mo>
+                        <mrow>
+                          <mfrac>
+                            <mrow>
+                              <mi>Number of drugs procured</mi>
+                            </mrow>
+                            <mrow>
+                              <mi>Population treated</mi>
+                            </mrow>
+                          </mfrac>
+                        </mrow>
+                    </math>
+                    <h3>Standardized Drug Procurement vs Treated</h3>
+                    <p>The number of drugs procured in each area (from JRSM) divided by the number of people treated in the area (from IU Data). This value is then standardized.                </p>
+                    <math display="block">
+                        <mi>SDP</mi>
+                        <mo>=</mo>
+                        <mrow>
+                          <mfrac>
+                            <mrow>
+                              <mi>DP - μ</mi>
+                            </mrow>
+                            <mrow>
+                              <mi>σ</mi>
+                            </mrow>
+                          </mfrac>
+                        </mrow>
+                    </math>
+                    <p>σ: The standard deviation</p>
+                    <p>μ: The mean</p>
+                    
+                    <h3>Disease MDA Coverage</h3>
+                    <p>The number of people treated for a disease (from IU Data) divided by the total number of people who require treatment (from IU Data)</p>
+                    <math display="block">
+                        <mi>MDAC</mi>
+                        <mo>=</mo>
+                        <mrow>
+                          <mfrac>
+                            <mrow>
+                              <mi>Population treated for disease</mi>
+                            </mrow>
+                            <mrow>
+                              <mi>Population requiring treatment</mi>
+                            </mrow>
+                          </mfrac>
+                        </mrow>
+                    </math>
+                    <h3>Disease YLD Value</h3>
+                    <p>The population of an area (from the JRSM) divided by the YLD rate for the disease (calculated in the IHME Data set)</p>
+                    <math display="block">
+                        <mi>DYLD</mi>
+                        <mo>=</mo>
+                        <mrow>
+                          <mfrac>
+                            <mrow>
+                              <mi>State population</mi>
+                            </mrow>
+                            <mrow>
+                              <mi>Disease YLD</mi>
+                            </mrow>
+                          </mfrac>
+                        </mrow>
+                    </math>
+                    <h3>Normalized Drug Ratio</h3>
+                    <p>Normalized DR for each state to be used in the disease measure</p>
+                    <math display="block">
+                        <mi>NDR</mi>
+                        <mo>=</mo>
+                        <mrow>
+                          <mfrac>
+                            <mrow>
+                                <mi>DR</mi>
+                                <mo>&#x2212;</mo>
+                                <msub>
+                                    <mi>DR</mi>
+                                    <mi>min</mi>
+                                </msub> 
+                            </mrow>
+                            <mrow>
+                                <msub>
+                                    <mi>DR</mi>
+                                    <mi>max</mi>
+                                </msub> 
+                                <mo>&#x2212;</mo>
+                                <msub>
+                                    <mi>DR</mi>
+                                    <mi>min</mi>
+                                </msub> 
+                            </mrow>
+                          </mfrac>
+                        </mrow>
+                    </math>
+                    <h3>Normalized YLD</h3>
+                    <p>Normalized YLD for each state to be used in the disease measure.</p>
+                    <math display="block">
+                        <mi>NYLD</mi>
+                        <mo>=</mo>
+                        <mrow>
+                          <mfrac>
+                            <mrow>
+                                <mi>YLD</mi>
+                                <mo>&#x2212;</mo>
+                                <msub>
+                                    <mi>YLD</mi>
+                                    <mi>min</mi>
+                                </msub> 
+                            </mrow>
+                            <mrow>
+                                <msub>
+                                    <mi>YLD</mi>
+                                    <mi>max</mi>
+                                </msub> 
+                                <mo>&#x2212;</mo>
+                                <msub>
+                                    <mi>YLD</mi>
+                                    <mi>min</mi>
+                                </msub> 
+                            </mrow>
+                          </mfrac>
+                        </mrow>
+                    </math>
+                    <h3>Disease Measure</h3>
+                    <p>Normalized Drug Ratio in each area divided (calculated) by Normalized YLD value (calculated) for the disease in each area</p>
+                    <math display="block">
+                        <mi>NDR</mi>
+                        <mo>=</mo>
+                        <mrow>
+                          <mfrac>
+                            <mrow>
+                              <mi>NDR</mi>
+                            </mrow>
+                            <mrow>
+                              <mi>NYLD</mi>
+                            </mrow>
+                          </mfrac>
+                        </mrow>
+                    </math>
+
+        
                 <h2>Visualizations</h2>
+                    <h3>Procurement vs Population Treated</h3>
+                        <p>Schistosomiasis: Compares the amount of PZQ procured compared to the population treated for Schisto through MDA (SDP).</p>
+                        <p>Onchocerciasis: Compares the amount of IVM procured compared to the population treated for Oncho through MDA (SDP).</p>
+                        <p>Lymphatic filariasis: Compares the amount of ALB and IVM procured for LF compared to the population treated for LF through MDA (SDP).</p>
+                    <h3>Disease Coverage</h3>
+                        <p>Percentage of population who were treated by MDA for each disease compared to population covered. </p>
+                    <h3>Standardized Procurement Ratio vs MDA Coverage</h3>
+                        <p>A scatter of the standardized procurement ratio and the MDA Coverage. The vertical line shows the 0 mark, and the distance from the 0 is how much extra or how much less a country procures. The distance from the 80% is our benchline mark for a good MDA coverage. </p>
+                    <h3>Procurement vs Population Requiring Treatment</h3>
+                        <p>Schistosomiasis: Compares the amount of Praziquantel (PZQ) procured for an area and the population requiring treatment in the area (DR).</p>
+                        <p>Onchocerciasis: Compares the amount of Praziquantel(PZQ) procured for an area and the number of people requiring treatment in the area (DR).</p>
+                        <p>Lymphatic filariasis: This map does not exist here. The ALB procured for LF has a considerable amount of missing data in the required treatment field.</p>
             </div>
           </div>
         </div>
